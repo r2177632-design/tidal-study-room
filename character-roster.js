@@ -4,8 +4,7 @@
   const useMobileAssets = window.matchMedia(
     "(max-width: 820px), (pointer: coarse)",
   ).matches;
-  const mobileAssetRoot =
-    "https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile";
+  const mobileAssetRoot = "./assets/mobile";
   const collectionRoot = useMobileAssets
     ? `${mobileAssetRoot}/characters/collection`
     : "./assets/characters/collection/final";

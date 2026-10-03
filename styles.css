@@ -996,7 +996,7 @@ kbd {
   .stage-scene {
     background-image:
       linear-gradient(180deg, rgba(5, 18, 30, 0.18), rgba(3, 12, 21, 0.66)),
-      url("https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile/farm/workbuddy/farm-background.webp");
+      url("./assets/mobile/farm/workbuddy/farm-background.webp");
   }
 }
 

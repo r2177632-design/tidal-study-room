@@ -536,8 +536,6 @@
   window.TidalFarmArt = {
     itemArt,
     levelArt,
-    npcImage: useMobileAssets
-      ? "https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/farm/npc/lanyin-portrait-v1.png?v=20261003b"
-      : "./assets/farm/npc/lanyin-portrait-v1.png?v=20261003b",
+    npcImage: "./assets/farm/npc/lanyin-portrait-v1.png?v=20261003b",
   };
 })();

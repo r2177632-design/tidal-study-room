@@ -1,13 +1,5 @@
 (() => {
-const MOBILE_ASSET_CDN =
-  "https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main";
-const USE_MOBILE_ASSET_CDN = window.matchMedia(
-  "(max-width: 820px), (pointer: coarse)",
-).matches;
-const assetUrl = (path) =>
-  USE_MOBILE_ASSET_CDN && path.startsWith("./assets/")
-    ? `${MOBILE_ASSET_CDN}/${path.slice(2)}`
-    : path;
+const assetUrl = (path) => path;
 
 const CROPS = [
   {
@@ -1673,7 +1665,7 @@ function createFarmGame({
     "(max-width: 820px), (pointer: coarse)",
   ).matches;
   const houseAssetRoot = useMobileAssets
-    ? `${MOBILE_ASSET_CDN}/assets/mobile/farm/doubao`
+    ? "./assets/mobile/farm/doubao"
     : "./assets/farm/doubao";
   const houseAssetExtension = useMobileAssets ? "webp" : "png";
   const houseAssetUrl = (name) => `${houseAssetRoot}/${name}.${houseAssetExtension}`;
@@ -2578,7 +2570,7 @@ function createFarmGame({
           <div class="farm-companion-art">
             <img
               data-farm-companion-image
-              src="${useMobileAssets ? `${MOBILE_ASSET_CDN}/assets/mobile/characters/cute/deep-current-cute-cutout-v1.webp` : "./assets/characters/cute/cutouts/deep-current-cute-cutout-v1.png"}"
+              src="${useMobileAssets ? "./assets/mobile/characters/cute/deep-current-cute-cutout-v1.webp" : "./assets/characters/cute/cutouts/deep-current-cute-cutout-v1.png"}"
               alt="深汐"
             />
             <span class="farm-companion-ring" aria-hidden="true"></span>

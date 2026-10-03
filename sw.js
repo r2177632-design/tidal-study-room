@@ -1,21 +1,19 @@
-const CACHE_VERSION = "20261003223000";
+const CACHE_VERSION = "20261003225500";
 const CORE_CACHE = `tidal-study-core-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `tidal-study-runtime-${CACHE_VERSION}`;
-const CDN_ORIGIN = "https://fastly.jsdelivr.net";
-const CDN_ASSET_PREFIX = "/gh/r2177632-design/tidal-study-room@main/assets/";
 
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=20261003223000",
-  "./farm.css?v=20261003223000",
-  "./character-roster.js?v=20261003223000",
-  "./character-marks.js?v=20261003223000",
-  "./farm-game.js?v=20261003223000",
-  "./farm-art.js?v=20261003223000",
-  "./app.js?v=20261003223000",
+  "./styles.css?v=20261003225500",
+  "./farm.css?v=20261003225500",
+  "./character-roster.js?v=20261003225500",
+  "./character-marks.js?v=20261003225500",
+  "./farm-game.js?v=20261003225500",
+  "./farm-art.js?v=20261003225500",
+  "./app.js?v=20261003225500",
   "./manifest.webmanifest",
-  "./assets/characters/idle/idle-frames.js?v=20261003223000",
+  "./assets/characters/idle/idle-frames.js?v=20261003225500",
   "./assets/launcher/tidal-study-192.png",
   "./assets/launcher/tidal-study-512.png",
   "./assets/launcher/tidal-study-maskable-512.png",
@@ -59,13 +57,6 @@ function isRuntimeAsset(request, url) {
     url.pathname.includes("/assets/mobile/") ||
     url.pathname.includes("/assets/characters/idle/") ||
     url.pathname.endsWith("/vendor/lucide.js")
-  );
-}
-
-function isCdnAsset(url) {
-  return (
-    url.origin === CDN_ORIGIN &&
-    url.pathname.startsWith(CDN_ASSET_PREFIX)
   );
 }
 
@@ -117,12 +108,7 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
-  if (url.origin !== self.location.origin) {
-    if (request.destination === "image" && isCdnAsset(url)) {
-      event.respondWith(cacheFirst(request, RUNTIME_CACHE));
-    }
-    return;
-  }
+  if (url.origin !== self.location.origin) return;
 
   if (request.mode === "navigate") {
     event.respondWith(networkFirstNavigation(request));
