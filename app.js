@@ -1623,12 +1623,14 @@ function renderCompanionTabs(metrics, current) {
   `;
 }
 
-function collectionCardMarkup(character, metrics, current) {
+function collectionCardMarkup(character, metrics, current, pageIndex) {
   const pendingArt = character.artStatus === "pending";
   const unlocked = !pendingArt && characterIsUnlocked(character, metrics, "cute");
   const active = unlocked && character.id === current.id;
   const marks = Math.min(CHARACTER_MAX_MARKS, metrics.characterMarks?.[character.id] || 0);
   const unlockedForms = metrics.unlockedFormsByCharacter?.[character.id] || [];
+  const thumbnail = character.thumbnailImage || character.image;
+  const thumbnailIsActive = pageIndex === collectionPageIndex;
   const formProgress = CHARACTER_FORM_IDS.map((form) => {
     const formUnlocked = unlockedForms.includes(form);
     const threshold = CHARACTER_FORM_THRESHOLDS[form];
@@ -1658,8 +1660,12 @@ function collectionCardMarkup(character, metrics, current) {
     >
       <span class="card-pet-mark">${characterMarkMarkup(character, "sm")}</span>
       ${
-        character.thumbnailImage || character.image
-          ? `<img src="${character.thumbnailImage || character.image}" alt="${unlocked ? character.name : "未解锁伙伴"}" loading="lazy" decoding="async" />`
+        thumbnail
+          ? `<img ${
+              thumbnailIsActive
+                ? `src="${thumbnail}"`
+                : `src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-collection-thumb="${thumbnail}"`
+            } alt="${unlocked ? character.name : "未解锁伙伴"}" loading="lazy" decoding="async" />`
           : `<span class="card-pending" aria-hidden="true"><i data-lucide="scan-face"></i></span>`
       }
       ${
@@ -1698,6 +1704,11 @@ function updateCollectionCarousel() {
     page.classList.toggle("is-active", activePage);
     page.setAttribute("aria-hidden", String(!activePage));
   });
+  const activePage = elements.collectionGrid.children[collectionPageIndex];
+  activePage?.querySelectorAll("img[data-collection-thumb]").forEach((image) => {
+    image.src = image.dataset.collectionThumb;
+    image.removeAttribute("data-collection-thumb");
+  });
 }
 
 function renderCollectionCards(metrics, current) {
@@ -1716,9 +1727,13 @@ function renderCollectionCards(metrics, current) {
   }
   elements.collectionGrid.innerHTML = pages
     .map(
-      (page) => `
+      (page, pageIndex) => `
         <div class="collection-page">
-          ${page.map((character) => collectionCardMarkup(character, metrics, current)).join("")}
+          ${page
+            .map((character) =>
+              collectionCardMarkup(character, metrics, current, pageIndex),
+            )
+            .join("")}
         </div>
       `,
     )

@@ -1,22 +1,20 @@
-const CACHE_VERSION = "20261004002000";
+const CACHE_VERSION = "20261004004500";
 const CORE_CACHE = `tidal-study-core-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `tidal-study-runtime-${CACHE_VERSION}`;
 
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=20261004002000",
-  "./farm.css?v=20261004002000",
-  "./character-roster.js?v=20261004002000",
-  "./character-marks.js?v=20261004002000",
-  "./farm-game.js?v=20261004002000",
-  "./farm-art.js?v=20261004002000",
-  "./app.js?v=20261004002000",
+  "./styles.css?v=20261004004500",
+  "./farm.css?v=20261004004500",
+  "./character-roster.js?v=20261004004500",
+  "./character-marks.js?v=20261004004500",
+  "./farm-game.js?v=20261004004500",
+  "./farm-art.js?v=20261004004500",
+  "./app.js?v=20261004004500",
   "./manifest.webmanifest",
-  "./assets/characters/idle/idle-frames.js?v=20261004002000",
+  "./assets/characters/idle/idle-frames.js?v=20261004004500",
   "./assets/launcher/tidal-study-192.png",
-  "./assets/launcher/tidal-study-512.png",
-  "./assets/launcher/tidal-study-maskable-512.png",
   "./vendor/lucide.js",
 ];
 

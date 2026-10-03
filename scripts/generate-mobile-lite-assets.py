@@ -46,9 +46,22 @@ def generate_farm_assets() -> None:
     )
 
 
+def generate_launcher_assets() -> None:
+    source = ROOT / "assets" / "launcher" / "tidal-study-192.png"
+    target = ROOT / "assets" / "launcher" / "tidal-study.ico"
+    with Image.open(source) as image:
+        image.convert("RGBA").save(
+            target,
+            "ICO",
+            sizes=[(16, 16), (32, 32)],
+        )
+    print(f"{source.relative_to(ROOT)} -> {target.relative_to(ROOT)}")
+
+
 def main() -> None:
     generate_collection_thumbnails()
     generate_farm_assets()
+    generate_launcher_assets()
 
 
 if __name__ == "__main__":
