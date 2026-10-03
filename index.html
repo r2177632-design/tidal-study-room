@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="个人学习监督与鲸鱼娘收藏工作台"
+    />
+    <meta name="theme-color" content="#061b21" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="潮汐书斋" />
+    <title>潮汐书斋</title>
+    <link rel="icon" href="./assets/launcher/tidal-study.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./assets/launcher/tidal-study-180.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css?v=20261003170000" />
+    <link rel="stylesheet" href="./farm.css?v=20261003170000" />
+    <script src="./vendor/lucide.js"></script>
+  </head>
+  <body>
+    <div class="ocean-noise" aria-hidden="true"></div>
+    <div class="app-shell" id="app">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="brand-kicker">TIDAL STUDY ROOM</p>
+            <h1>潮汐书斋</h1>
+          </div>
+        </div>
+
+        <div class="topbar-center">
+          <div class="date-block">
+            <span id="weekdayLabel">星期三</span>
+            <strong id="dateLabel">09月30日</strong>
+          </div>
+          <div class="day-progress" aria-label="今日任务进度">
+            <div class="progress-ring" id="progressRing">
+              <span id="progressValue">0%</span>
+            </div>
+            <div>
+              <small>今日潮位</small>
+              <strong id="progressCopy">还没有任务</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="quiet-button" id="soundButton" type="button" title="开关环境音">
+            <i data-lucide="volume-2"></i>
+            <span>环境音</span>
+          </button>
+          <button class="quiet-button" id="focusButton" type="button" title="进入专注模式">
+            <i data-lucide="scan"></i>
+            <span>专注</span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="view-tabs" aria-label="主导航">
+        <button class="is-active" type="button" data-screen="today">
+          <i data-lucide="sun-medium"></i>
+          今日任务
+        </button>
+        <button type="button" data-screen="plans">
+          <i data-lucide="calendar-range"></i>
+          长期计划
+        </button>
+        <button type="button" data-screen="farm">
+          <i data-lucide="sprout"></i>
+          潮汐农场
+        </button>
+      </nav>
+
+      <main class="workspace">
+        <section class="screen-panel today-screen is-active" data-screen-panel="today">
+          <div class="today-grid">
+            <section class="panel task-panel" aria-labelledby="taskTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">01</span> TODAY</p>
+                  <h2 id="taskTitle">今天的航程</h2>
+                </div>
+                <span class="task-count" id="taskCount">0 项</span>
+              </div>
+
+              <form class="task-composer" id="taskForm">
+                <i data-lucide="plus" aria-hidden="true"></i>
+                <label class="sr-only" for="taskInput">添加今日任务</label>
+                <input
+                  id="taskInput"
+                  name="task"
+                  type="text"
+                  maxlength="80"
+                  autocomplete="off"
+                  placeholder="添加只属于今天的任务"
+                />
+                <kbd>Enter</kbd>
+              </form>
+
+              <div class="task-list" id="taskList" aria-live="polite"></div>
+
+              <div class="empty-state" id="emptyState">
+                <div class="empty-orbit" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <h3>今天还是一片静水</h3>
+                <p>可以在长期计划中安排每天的任务，也可以先添加一项临时任务。</p>
+                <div class="suggestion-row" id="suggestionRow">
+                  <button type="button" data-suggestion="阅读 30 分钟">阅读 30 分钟</button>
+                  <button type="button" data-suggestion="完成今日课程">完成今日课程</button>
+                  <button type="button" data-suggestion="整理一页笔记">整理一页笔记</button>
+                </div>
+              </div>
+
+              <div class="task-footer">
+                <span><i data-lucide="medal"></i> 每天 00:00 结算全清，可领取 1 枚自选印记；未选印记可长期保存</span>
+                <div class="task-footer-actions">
+                  <button type="button" id="perfectMarkButton" hidden>
+                    <i data-lucide="stamp"></i>
+                    <span id="perfectMarkButtonLabel">选择全清印记</span>
+                  </button>
+                  <button type="button" id="clearCompleted">收起已完成</button>
+                </div>
+              </div>
+            </section>
+
+            <aside class="today-side">
+              <section class="panel stage-panel" aria-labelledby="stageTitle">
+                <div class="stage-heading">
+                <div>
+                  <p class="section-label">COMPANION</p>
+                  <h2 id="stageTitle">深汐</h2>
+                  <p id="stageSubtitle">负责主界面陪伴、每日状态与搁浅提醒。</p>
+                </div>
+                <div class="view-switch" aria-label="角色展示方式">
+                  <button class="is-active" type="button" data-art="cute">
+                    <i data-lucide="sparkles"></i>
+                    幼态
+                  </button>
+                  <button type="button" data-art="pretty">
+                    <i data-lucide="sparkles"></i>
+                    鲸歌
+                  </button>
+                  <button type="button" data-art="collection">
+                    <i data-lucide="image"></i>
+                    典藏
+                  </button>
+                </div>
+              </div>
+
+                <div class="stage-viewport" id="stageViewport">
+                  <div class="stage-scene" aria-hidden="true"></div>
+                  <div class="stage-scene-shade" aria-hidden="true"></div>
+                  <div class="stage-glow" aria-hidden="true"></div>
+                  <div class="portrait-layer is-active" id="portraitLayer">
+                    <img
+                      id="portraitImage"
+                      src="./assets/characters/cute/cutouts/deep-current-cute-cutout-v1.png"
+                      alt="深汐立绘"
+                    />
+                    <div class="portrait-reflection" aria-hidden="true"></div>
+                  </div>
+                  <div class="character-pending" id="characterPending" hidden>
+                    <i data-lucide="scan-face"></i>
+                    <strong>形象待确认</strong>
+                    <span>可爱方向定稿后再接入</span>
+                    <div class="hatch-medals" id="hatchMedals" aria-label="潮芽徽记熔铸进度">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="stage-hud">
+                    <span class="status-chip" id="selectedRole">值日记录</span>
+                    <span class="status-chip muted" id="selectedState">已抵达</span>
+                  </div>
+                  <div class="focus-dock" id="focusDock" hidden>
+                    <div class="focus-copy">
+                      <small>FOCUS CURRENT</small>
+                      <strong id="focusTaskTitle">自由专注</strong>
+                    </div>
+                    <time id="focusTimer" datetime="PT25M">25:00</time>
+                    <div class="focus-actions">
+                      <button type="button" id="focusComplete" title="完成当前任务">
+                        <i data-lucide="check"></i>
+                        <span>完成</span>
+                      </button>
+                      <button type="button" id="focusSkip" title="切换下一项待办">
+                        <i data-lucide="forward"></i>
+                        <span>跳过</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-footer">
+                  <div class="companion-tabs" id="companionTabs" aria-label="切换伙伴"></div>
+                  <div class="stage-action">
+                    <div class="stage-action-copy">
+                      <small>每解锁 3 位鲸歌形态，装帧 1 张</small>
+                      <strong id="whaleTokenCount">0 / 3</strong>
+                      <span class="stage-action-hint" id="mergeHint">
+                        再解锁 3 位鲸歌形态即可装帧
+                      </span>
+                    </div>
+                    <button class="primary-button" id="mergeButton" type="button">
+                      <i data-lucide="sparkles"></i>
+                      <span id="mergeButtonLabel">查看装帧进度</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <aside class="panel collection-panel" aria-labelledby="collectionTitle">
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-label">REWARDS</p>
+                    <h2 id="collectionTitle">成长典藏</h2>
+                  </div>
+                  <span class="collection-count" id="collectionCount">1 / 4</span>
+                </div>
+
+                <div class="collection-carousel">
+                  <div class="collection-viewport" id="collectionViewport">
+                    <div class="collection-grid" id="collectionGrid"></div>
+                  </div>
+                  <div class="collection-pager" aria-label="成长典藏翻页">
+                    <button
+                      class="collection-page-button"
+                      id="collectionPrev"
+                      type="button"
+                      aria-label="上一页"
+                    >
+                      <i data-lucide="chevron-left"></i>
+                    </button>
+                    <span id="collectionPage">1 / 5</span>
+                    <button
+                      class="collection-page-button"
+                      id="collectionNext"
+                      type="button"
+                      aria-label="下一页"
+                    >
+                      <i data-lucide="chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="tide-history" id="tideHistory" aria-label="近七日全清记录"></div>
+
+                <div class="growth-block">
+                  <div class="growth-heading">
+                    <span>合成进度</span>
+                    <strong id="growthPercent">0%</strong>
+                  </div>
+                  <div class="depth-gauge">
+                    <div class="depth-fill" id="depthFill"></div>
+                    <div class="depth-marks" aria-hidden="true">
+                      <span>0</span>
+                      <span>25</span>
+                      <span>50</span>
+                      <span>75</span>
+                      <span>100</span>
+                    </div>
+                  </div>
+                  <p id="growthCopy">完成伙伴任务，收集专属印记并解锁三种形态。</p>
+                </div>
+
+                <div class="archive-strip">
+                  <div>
+                    <small>全清日</small>
+                    <strong id="perfectDays">0</strong>
+                  </div>
+                  <div>
+                    <small>连续学习</small>
+                    <strong id="streakDays">0</strong>
+                  </div>
+                  <div>
+                    <small>潮汐典藏卡</small>
+                    <strong id="bigWhaleCount">0</strong>
+                  </div>
+                </div>
+              </aside>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen-panel planner-screen" data-screen-panel="plans">
+          <div class="planner-grid">
+            <section class="panel plan-editor-panel" aria-labelledby="planEditorTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">01</span> SCHEDULE</p>
+                  <h2 id="planEditorTitle">长期任务设置</h2>
+                </div>
+                <button class="quiet-button" id="planReset" type="button">
+                  <i data-lucide="plus"></i>
+                  <span>新建</span>
+                </button>
+              </div>
+
+              <form class="plan-form" id="planForm">
+                <label class="plan-field plan-field-wide">
+                  <span>任务名称</span>
+                  <input id="planTitle" type="text" maxlength="80" required placeholder="例如：背 50 个单词" />
+                </label>
+
+                <label class="plan-field">
+                  <span>重复方式</span>
+                  <select id="planRepeat">
+                    <option value="daily">每天</option>
+                    <option value="weekdays">工作日</option>
+                    <option value="weekly">每周指定日期</option>
+                    <option value="interval">每 N 天</option>
+                    <option value="once">只执行一次</option>
+                  </select>
+                </label>
+
+                <label class="plan-field" id="planIntervalField" hidden>
+                  <span>间隔天数</span>
+                  <input id="planInterval" type="number" min="1" max="60" value="2" />
+                </label>
+
+                <label class="plan-field">
+                  <span>开始日期</span>
+                  <input id="planStartDate" type="date" required />
+                </label>
+
+                <label class="plan-field">
+                  <span>结束日期</span>
+                  <input id="planEndDate" type="date" />
+                </label>
+
+                <label class="plan-field">
+                  <span>开始时间</span>
+                  <input id="planStartTime" type="time" value="19:00" />
+                </label>
+
+                <label class="plan-field">
+                  <span>结束时间</span>
+                  <input id="planEndTime" type="time" value="19:30" />
+                </label>
+
+                <label class="plan-field">
+                  <span>预计时长（分钟）</span>
+                  <input id="planEstimate" type="number" min="5" max="480" value="30" />
+                </label>
+
+                <label class="plan-field">
+                  <span>截止时间</span>
+                  <input id="planDeadline" type="time" />
+                </label>
+
+                <label class="plan-field">
+                  <span>分类</span>
+                  <select id="planCategory">
+                    <option value="学习">学习</option>
+                    <option value="阅读">阅读</option>
+                    <option value="复习">复习</option>
+                    <option value="运动">运动</option>
+                    <option value="其他">其他</option>
+                  </select>
+                </label>
+
+                <fieldset class="weekday-field plan-field-wide" id="planWeekdayField" hidden>
+                  <legend>每周执行日期</legend>
+                  <label><input type="checkbox" value="1" /> 一</label>
+                  <label><input type="checkbox" value="2" /> 二</label>
+                  <label><input type="checkbox" value="3" /> 三</label>
+                  <label><input type="checkbox" value="4" /> 四</label>
+                  <label><input type="checkbox" value="5" /> 五</label>
+                  <label><input type="checkbox" value="6" /> 六</label>
+                  <label><input type="checkbox" value="0" /> 日</label>
+                </fieldset>
+
+                <button class="primary-button plan-submit" id="planSubmit" type="submit">
+                  <i data-lucide="calendar-plus"></i>
+                  添加长期任务
+                </button>
+              </form>
+            </section>
+
+            <section class="panel plan-overview-panel" aria-labelledby="planOverviewTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">02</span> SEVEN TIDES</p>
+                  <h2 id="planOverviewTitle">计划与未来七天</h2>
+                </div>
+                <span class="task-count" id="planCount">0 项</span>
+              </div>
+
+              <div class="week-preview">
+                <div class="week-preview-heading">
+                  <div>
+                    <h3>未来七天</h3>
+                    <span>计划生成预览</span>
+                  </div>
+                  <div class="week-preview-key" aria-hidden="true">
+                    <i></i>
+                    <span>今日潮位</span>
+                  </div>
+                </div>
+                <div class="week-grid" id="weekGrid"></div>
+              </div>
+
+              <div class="plan-list-heading">
+                <h3>长期任务</h3>
+                <span>点击卡片可编辑，暂停后不再生成</span>
+              </div>
+              <div class="plan-list" id="planList"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen-panel" data-screen-panel="farm">
+          <div class="farm-root" id="farmRoot"></div>
+        </section>
+      </main>
+
+      <footer class="statusbar">
+        <div class="status-item">
+          <span class="status-beacon" id="statusBeacon"></span>
+          <span id="statusCopy">等待今天的第一项任务</span>
+        </div>
+        <div class="shortcut-strip">
+          <span><kbd>N</kbd> 新任务</span>
+          <span><kbd>F</kbd> 专注</span>
+          <span><kbd>1-4</kbd> 切换伙伴</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-region" id="toastRegion" aria-live="assertive"></div>
+
+    <div class="merge-overlay" id="mergeOverlay" aria-hidden="true">
+      <div class="merge-scene">
+        <button class="merge-close" id="mergeClose" type="button" aria-label="关闭共鸣演出">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="merge-rings" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="resonance-trio" id="mergeTrio" aria-label="三位独立鲸灵同时到席">
+          <figure>
+            <img
+              src="./assets/characters/collection/final/deep-current-collection-final-v1.png"
+              alt="深汐全身立绘"
+            />
+            <figcaption>深汐 · 值日</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/characters/collection/final/frost-scale-collection-final-v1.png"
+              alt="霜鳞全身立绘"
+            />
+            <figcaption>霜鳞 · 守序</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./assets/characters/collection/final/scarlet-page-collection-final-v1.png"
+              alt="绯页全身立绘"
+            />
+            <figcaption>绯页 · 编目</figcaption>
+          </figure>
+        </div>
+        <p class="merge-kicker">TIDAL CARD FRAMED</p>
+        <h2 id="mergeTitle">潮汐典藏卡完成装帧</h2>
+        <p id="mergeDescription">
+          每解锁 3 位伙伴的鲸歌形态，就能把本组的同行印记装帧成 1 张潮汐典藏卡。
+        </p>
+        <button class="primary-button merge-confirm" id="mergeConfirm" type="button">
+          装帧并收进典藏馆
+        </button>
+      </div>
+    </div>
+
+    <div class="mark-choice-overlay" id="markChoiceOverlay" aria-hidden="true">
+      <section class="mark-choice-scene" role="dialog" aria-modal="true" aria-labelledby="markChoiceTitle">
+        <button class="mark-choice-close" id="markChoiceClose" type="button" aria-label="稍后选择">
+          <i data-lucide="x"></i>
+        </button>
+        <p class="mark-choice-kicker">PERFECT TIDE SEAL</p>
+        <h2 id="markChoiceTitle">选择全清的专属印记</h2>
+        <p class="mark-choice-copy" id="markChoiceCopy">
+          已结算的全清日会存入待选区，未领取不会过期。挑选一位伙伴，让她的宠物印记落在收藏册中。
+        </p>
+        <div class="mark-choice-grid" id="markChoiceGrid"></div>
+        <p class="mark-choice-note" id="markChoiceNote">每次领取消耗 1 枚已存全清印记；剩余印记可以以后继续选择。</p>
+      </section>
+    </div>
+
+    <script src="./assets/characters/idle/idle-frames.js?v=20261003170000"></script>
+    <script src="./character-roster.js?v=20261003170000"></script>
+    <script src="./character-marks.js?v=20261003170000"></script>
+    <script src="./farm-game.js?v=20261003170000"></script>
+    <script src="./farm-art.js?v=20261003170000"></script>
+    <script src="./app.js?v=20261003170000"></script>
+  </body>
+</html>
