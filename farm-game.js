@@ -1669,6 +1669,40 @@ function createFarmGame({
     : "./assets/farm/doubao";
   const houseAssetExtension = useMobileAssets ? "webp" : "png";
   const houseAssetUrl = (name) => `${houseAssetRoot}/${name}.${houseAssetExtension}`;
+  const transparentPixel =
+    "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+  const mobileFarmBackdrop = (path) => {
+    if (!useMobileAssets) return path;
+    return path
+      .replace("./assets/farm/doubao/", "./assets/mobile/farm/doubao/")
+      .replace("-v2-2560.webp", "-v2-1600.webp");
+  };
+  const mobileFarmHomeSprite = (path) =>
+    useMobileAssets
+      ? "./assets/mobile/farm/doubao/buildings/tide-meadow-cottage.webp"
+      : path;
+  const npcPortraitUrl = useMobileAssets
+    ? "./assets/mobile/farm/doubao/npc/lanyin-portrait-v1.webp"
+    : ART.npcImage;
+  let farmMediaActivated = Boolean(inspectMode);
+  const deferredImageAttributes = (source) =>
+    farmMediaActivated
+      ? `src="${source}"`
+      : `src="${transparentPixel}" data-deferred-src="${source}"`;
+  const setDeferredImage = (element, source, alt) => {
+    if (!element) return;
+    element.dataset.deferredSrc = source;
+    element.src = farmMediaActivated ? source : transparentPixel;
+    if (alt !== undefined) element.alt = alt;
+  };
+  const activateFarmMedia = () => {
+    if (farmMediaActivated) return;
+    farmMediaActivated = true;
+    root.querySelectorAll("[data-deferred-src]").forEach((image) => {
+      const source = image.dataset.deferredSrc;
+      if (source) image.src = source;
+    });
+  };
   const HOUSE_UNLOCK_RADIUS = 390;
   const PLOT_UNLOCK_RADIUS = 260;
 
@@ -2353,7 +2387,11 @@ function createFarmGame({
                 <img
                   class="farm-backdrop"
                   data-farm-backdrop
-                  src="${assetUrl("./assets/farm/doubao/map-tide-meadow-v2-2560.webp")}"
+                  ${deferredImageAttributes(
+                    mobileFarmBackdrop(
+                      assetUrl("./assets/farm/doubao/map-tide-meadow-v2-2560.webp"),
+                    ),
+                  )}
                   alt="潮汐农场"
                 />
                 <div class="farm-lightwash" aria-hidden="true"></div>
@@ -2401,7 +2439,15 @@ function createFarmGame({
             <div class="farm-plot-inspector" data-farm-plot-inspector hidden></div>
             <div class="farm-map-nav" data-farm-map-nav aria-label="农场地块"></div>
             <div class="farm-map-minimap" data-farm-minimap title="点击小地图快速移动视野">
-              <img data-farm-minimap-image src="${assetUrl("./assets/farm/doubao/map-tide-meadow-v2-2560.webp")}" alt="" />
+              <img
+                data-farm-minimap-image
+                ${deferredImageAttributes(
+                  mobileFarmBackdrop(
+                    assetUrl("./assets/farm/doubao/map-tide-meadow-v2-2560.webp"),
+                  ),
+                )}
+                alt=""
+              />
               <i data-farm-minimap-view aria-hidden="true"></i>
             </div>
             <div class="farm-tide-card" data-farm-tide-card>
@@ -2570,7 +2616,11 @@ function createFarmGame({
           <div class="farm-companion-art">
             <img
               data-farm-companion-image
-              src="${useMobileAssets ? "./assets/mobile/characters/cute/deep-current-cute-cutout-v1.webp" : "./assets/characters/cute/cutouts/deep-current-cute-cutout-v1.png"}"
+              ${deferredImageAttributes(
+                useMobileAssets
+                  ? "./assets/mobile/characters/cute/deep-current-cute-cutout-v1.webp"
+                  : "./assets/characters/cute/cutouts/deep-current-cute-cutout-v1.png",
+              )}
               alt="深汐"
             />
             <span class="farm-companion-ring" aria-hidden="true"></span>
@@ -2602,11 +2652,11 @@ function createFarmGame({
         <div class="farm-house-level-track" data-house-level-track></div>
         <div class="farm-house-preview-grid">
           <figure class="farm-house-exterior-card">
-            <img data-house-exterior src="${houseAssetUrl("cottage-level-1")}" alt="鲸梦小屋外观" loading="lazy" decoding="async" />
+            <img data-house-exterior ${deferredImageAttributes(houseAssetUrl("cottage-level-1"))} alt="鲸梦小屋外观" decoding="async" />
             <figcaption data-house-exterior-copy>潮线小屋 · 基础外观</figcaption>
           </figure>
           <div class="farm-room-scene has-photo" data-house-room data-wallpaper="0" data-floor="0" data-bed="0" data-desk="0" data-lamp="0" data-aquarium="0">
-            <img class="farm-room-backdrop" data-house-interior src="${houseAssetUrl("room-level-1")}" alt="鲸梦小屋室内" loading="lazy" decoding="async" />
+            <img class="farm-room-backdrop" data-house-interior ${deferredImageAttributes(houseAssetUrl("room-level-1"))} alt="鲸梦小屋室内" decoding="async" />
             <span class="farm-room-window" aria-hidden="true"></span>
             <span class="farm-room-light" aria-hidden="true"></span>
             <span class="farm-room-rug" aria-hidden="true"></span>
@@ -3087,6 +3137,14 @@ function createFarmGame({
     const safeIndex = Math.max(0, frameIndex);
     const idleSprite =
       form === "cute" && !useMobileAssets ? character.idleSprite : "";
+    if (!farmMediaActivated) {
+      setDeferredImage(
+        elements.avatarSprite,
+        frames[0] || characterArt(character, form),
+        `${character.name}${characterForm()}形态`,
+      );
+      return;
+    }
     if (idleSprite) {
       const key = `${character.id}:${form}:sprite:${idleSprite}`;
       if (avatarSpriteKey !== key) {
@@ -5150,7 +5208,7 @@ function createFarmGame({
     if (!story.chapter) {
       elements.story.innerHTML = `
         <div class="farm-story-portrait">
-          <img src="${ART.npcImage}" alt="澜音" />
+          <img ${deferredImageAttributes(npcPortraitUrl)} alt="澜音" />
         </div>
         <div class="farm-story-copy">
           <span class="farm-board-label">MAIN STORY · COMPLETE</span>
@@ -5183,7 +5241,7 @@ function createFarmGame({
       : story.state.activeRequirement?.label || "章节条件";
     elements.story.innerHTML = `
       <div class="farm-story-portrait">
-        <img src="${ART.npcImage}" alt="澜音" />
+        <img ${deferredImageAttributes(npcPortraitUrl)} alt="澜音" />
         <span>NPC</span>
       </div>
       <div class="farm-story-copy">
@@ -5224,7 +5282,9 @@ function createFarmGame({
     const houseDefinition =
       HOUSE_LEVELS.find((item) => item.level === farm.houseLevel) || HOUSE_LEVELS[0];
     const useMapHomeSprite = farm.houseLevel === 1 && Boolean(map.homeSprite);
-    const homeImage = useMapHomeSprite ? map.homeSprite : houseAssets.exterior;
+    const homeImage = mobileFarmHomeSprite(
+      useMapHomeSprite ? map.homeSprite : houseAssets.exterior,
+    );
 
     if (elements.worldHome) {
       elements.worldHome.innerHTML = `
@@ -5235,7 +5295,7 @@ function createFarmGame({
           style="--node-x:${home.x}px;--node-y:${home.y}px;--node-shift-y:${-(Number(map.homeSpriteAnchorY) || 0.5) * 100}%;--home-width:${map.homeSpriteWidth || 320}px"
           title="${houseDefinition.name}，点击进入鲸梦小屋"
         >
-          <img src="${homeImage}" alt="${houseDefinition.name}" />
+          <img ${deferredImageAttributes(homeImage)} alt="${houseDefinition.name}" />
           <span>${houseDefinition.name} · Lv.${farm.houseLevel}</span>
         </button>
       `;
@@ -5258,7 +5318,7 @@ function createFarmGame({
           title="澜音 · 查看当前主线"
         >
           <span class="farm-npc-bubble">${dialogue}</span>
-          <span class="farm-npc-portrait"><img src="${ART.npcImage}" alt="澜音" /></span>
+          <span class="farm-npc-portrait"><img ${deferredImageAttributes(npcPortraitUrl)} alt="澜音" /></span>
           <strong>澜音 · 潮汐簿管理员</strong>
         </button>
       `;
@@ -5289,7 +5349,7 @@ function createFarmGame({
           const decorationArt = decoration.sprite
             ? `<img
                 class="farm-world-decoration-image"
-                src="${decoration.sprite}"
+                ${deferredImageAttributes(decoration.sprite)}
                 alt=""
               />`
             : art(`decor:${decoration.id}`, decoration.name);
@@ -5388,9 +5448,9 @@ function createFarmGame({
     elements.stage.style.setProperty("--map-accent", currentMap.accent);
     elements.world.style.width = `${currentMap.worldWidth}px`;
     elements.world.style.height = `${currentMap.worldHeight}px`;
-    elements.backdrop.src = currentMap.backdrop;
-    elements.backdrop.alt = `${currentMap.name}农场`;
-    elements.minimapImage.src = currentMap.backdrop;
+    const backdrop = mobileFarmBackdrop(currentMap.backdrop);
+    setDeferredImage(elements.backdrop, backdrop, `${currentMap.name}农场`);
+    setDeferredImage(elements.minimapImage, backdrop, "");
     elements.mapPerk.textContent = currentMap.perk;
     elements.mapNav.innerHTML = FARM_MAPS.map((map) => {
       const unlocked = farm.unlockedMaps.includes(map.id);
@@ -5451,7 +5511,7 @@ function createFarmGame({
           style="--character-color:${character.color}"
           title="${unlocked ? `让${character.name}来到农场` : `${character.name}尚未抵达`}"
         >
-          <img src="${characterIdleFrames(character, "cute")[0]}" alt="" loading="lazy" decoding="async" />
+          <img ${deferredImageAttributes(characterIdleFrames(character, "cute")[0])} alt="" decoding="async" />
           <span>${character.name}</span>
           ${unlocked ? "" : '<i data-lucide="lock-keyhole"></i>'}
         </button>
@@ -5536,8 +5596,11 @@ function createFarmGame({
     });
     elements.houseRoom.dataset.houseLevel = String(farm.houseLevel);
     elements.houseRoom.classList.add("has-photo");
-    elements.houseExterior.src = houseAssets.exterior;
-    elements.houseExterior.alt = `${houseDefinition.name}外观`;
+    setDeferredImage(
+      elements.houseExterior,
+      houseAssets.exterior,
+      `${houseDefinition.name}外观`,
+    );
     elements.houseExterior.onerror = () => {
       const fallback = houseAssetUrl(`cottage-level-${farm.houseLevel}`);
       if (!elements.houseExterior.src.endsWith(fallback.slice(2))) {
@@ -5545,8 +5608,11 @@ function createFarmGame({
       }
     };
     elements.houseExteriorCopy.textContent = `${houseDefinition.name} · 居所等级 ${farm.houseLevel}`;
-    elements.houseInterior.src = houseAssets.interior;
-    elements.houseInterior.alt = `${houseDefinition.name}室内`;
+    setDeferredImage(
+      elements.houseInterior,
+      houseAssets.interior,
+      `${houseDefinition.name}室内`,
+    );
     elements.houseInterior.onerror = () => {
       const fallback = houseAssetUrl(`room-level-${farm.houseLevel}`);
       if (!elements.houseInterior.src.endsWith(fallback.slice(2))) {
@@ -5574,8 +5640,11 @@ function createFarmGame({
       "--interior-glow",
       String(0.18 + decorationTotal * 0.025),
     );
-    elements.houseAvatar.src = characterImage;
-    elements.houseAvatar.alt = `${character.name}${characterForm()}形态`;
+    setDeferredImage(
+      elements.houseAvatar,
+      characterImage,
+      `${character.name}${characterForm()}形态`,
+    );
     elements.houseAvatar.dataset.focus = houseFocusItem;
     if (elements.houseFurnitureLayer) {
       elements.houseFurnitureLayer.innerHTML = FURNITURE.filter(
@@ -5945,8 +6014,11 @@ function createFarmGame({
     const form = characterForm();
     const formIndex = { cute: 0, pretty: 1, collection: 2 }[form] || 0;
     const formNames = { cute: "幼态", pretty: "鲸歌", collection: "典藏" };
-    elements.companionImage.src = characterArt(character, form);
-    elements.companionImage.alt = `${character.name}${formNames[form]}形态`;
+    setDeferredImage(
+      elements.companionImage,
+      characterArt(character, form),
+      `${character.name}${formNames[form]}形态`,
+    );
     elements.companionTitle.textContent = `${character.name} · ${formNames[form]}形态`;
     elements.companionCopy.textContent =
       form === "collection"
@@ -6777,6 +6849,7 @@ function createFarmGame({
         farm.farmVisited = true;
         persistSoon();
       }
+      activateFarmMedia();
       refresh();
     },
     setCharacter() {

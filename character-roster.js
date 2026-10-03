@@ -8,6 +8,9 @@
   const collectionRoot = useMobileAssets
     ? `${mobileAssetRoot}/characters/collection`
     : "./assets/characters/collection/final";
+  const collectionThumbnailRoot = useMobileAssets
+    ? `${mobileAssetRoot}/characters/collection-thumbs`
+    : "";
   const prettyCutoutRoot = useMobileAssets
     ? `${mobileAssetRoot}/characters/pretty`
     : "./assets/characters/pretty/cutouts";
@@ -200,14 +203,20 @@
   ];
 
   window.TIDAL_CHARACTERS = source.map((character) => {
-    const cuteFrames = idleFrames[character.id]?.length
-      ? idleFrames[character.id]
-      : [`${cuteCutoutRoot}/${character.id}-cute-cutout-v1.png`];
+    const collectionImage = `${collectionRoot}/${character.id}-collection-final-v1${imageExtension}`;
+    const cuteImage = `${cuteCutoutRoot}/${character.id}-cute-cutout-v1${imageExtension}`;
+    const cuteFrames =
+      useMobileAssets || !idleFrames[character.id]?.length
+        ? [cuteImage]
+        : idleFrames[character.id];
     return {
       ...character,
-      image: `${collectionRoot}/${character.id}-collection-final-v1${imageExtension}`,
+      image: collectionImage,
+      thumbnailImage: collectionThumbnailRoot
+        ? `${collectionThumbnailRoot}/${character.id}-collection-final-v1.webp`
+        : collectionImage,
       prettyImage: `${prettyCutoutRoot}/${character.id}-pretty-cutout-v1${imageExtension}`,
-      cuteImage: `${cuteCutoutRoot}/${character.id}-cute-cutout-v1${imageExtension}`,
+      cuteImage,
       idleFrames: cuteFrames,
       idleSprite: idleSprites[character.id] || "",
     };

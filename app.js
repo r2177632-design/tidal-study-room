@@ -1658,8 +1658,8 @@ function collectionCardMarkup(character, metrics, current) {
     >
       <span class="card-pet-mark">${characterMarkMarkup(character, "sm")}</span>
       ${
-        character.image
-          ? `<img src="${character.image}" alt="${unlocked ? character.name : "未解锁伙伴"}" loading="lazy" decoding="async" />`
+        character.thumbnailImage || character.image
+          ? `<img src="${character.thumbnailImage || character.image}" alt="${unlocked ? character.name : "未解锁伙伴"}" loading="lazy" decoding="async" />`
           : `<span class="card-pending" aria-hidden="true"><i data-lucide="scan-face"></i></span>`
       }
       ${
@@ -3081,10 +3081,13 @@ function boot() {
           // 注册失败时仍继续使用普通网页模式。
         });
     };
+    const scheduleServiceWorker = () => {
+      window.setTimeout(registerServiceWorker, 6000);
+    };
     if (document.readyState === "complete") {
-      registerServiceWorker();
+      scheduleServiceWorker();
     } else {
-      window.addEventListener("load", registerServiceWorker, { once: true });
+      window.addEventListener("load", scheduleServiceWorker, { once: true });
     }
   }
   window.setInterval(
