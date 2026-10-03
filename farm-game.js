@@ -1228,21 +1228,6 @@ const STORY_CHAPTERS = [
   },
 ];
 
-const HOUSE_ASSETS = {
-  1: {
-    exterior: "./assets/farm/doubao/cottage-level-1.png",
-    interior: "./assets/farm/doubao/room-level-1.png",
-  },
-  2: {
-    exterior: "./assets/farm/doubao/cottage-level-2.png",
-    interior: "./assets/farm/doubao/room-level-2.png",
-  },
-  3: {
-    exterior: "./assets/farm/doubao/cottage-level-3.png",
-    interior: "./assets/farm/doubao/room-level-3.png",
-  },
-};
-
 const FURNITURE = [
   {
     id: "wallpaper",
@@ -1667,12 +1652,21 @@ function createFarmGame({
   getSelectedCharacterId,
   onSelectCharacter,
   characterIsUnlocked,
+  formThresholds = { cute: 1, pretty: 10, collection: 20 },
   onStoryAction,
 }) {
   if (!root) return null;
 
   const inspectMode = new URLSearchParams(window.location.search).get("qa");
   const inspectAll = inspectMode === "all";
+  const useMobileAssets = window.matchMedia(
+    "(max-width: 820px), (pointer: coarse)",
+  ).matches;
+  const houseAssetRoot = useMobileAssets
+    ? "./assets/mobile/farm/doubao"
+    : "./assets/farm/doubao";
+  const houseAssetExtension = useMobileAssets ? "webp" : "png";
+  const houseAssetUrl = (name) => `${houseAssetRoot}/${name}.${houseAssetExtension}`;
   const HOUSE_UNLOCK_RADIUS = 390;
   const PLOT_UNLOCK_RADIUS = 260;
 
@@ -1828,8 +1822,9 @@ function createFarmGame({
       return characterIsUnlocked(character, metrics, formId);
     }
     if (formId === "cute") return true;
-    if (formId === "pretty") return farm.houseLevel >= 2;
-    if (formId === "collection") return farm.houseLevel >= 3;
+    const marks = Number(metrics.characterMarks?.[character.id]) || 0;
+    if (formId === "pretty") return marks >= formThresholds.pretty;
+    if (formId === "collection") return marks >= formThresholds.collection;
     return false;
   }
 
@@ -1848,7 +1843,7 @@ function createFarmGame({
   }
 
   function characterIdleFrames(character, form = characterForm()) {
-    if (form === "cute" && character.idleFrames?.length) {
+    if (form === "cute" && character.idleFrames?.length && !useMobileAssets) {
       return character.idleFrames;
     }
     return [characterArt(character, form)];
@@ -2601,11 +2596,11 @@ function createFarmGame({
         <div class="farm-house-level-track" data-house-level-track></div>
         <div class="farm-house-preview-grid">
           <figure class="farm-house-exterior-card">
-            <img data-house-exterior src="./assets/farm/doubao/cottage-level-1.png" alt="鲸梦小屋外观" />
+            <img data-house-exterior src="${houseAssetUrl("cottage-level-1")}" alt="鲸梦小屋外观" loading="lazy" decoding="async" />
             <figcaption data-house-exterior-copy>潮线小屋 · 基础外观</figcaption>
           </figure>
           <div class="farm-room-scene has-photo" data-house-room data-wallpaper="0" data-floor="0" data-bed="0" data-desk="0" data-lamp="0" data-aquarium="0">
-            <img class="farm-room-backdrop" data-house-interior src="./assets/farm/doubao/room-level-1.png" alt="鲸梦小屋室内" />
+            <img class="farm-room-backdrop" data-house-interior src="${houseAssetUrl("room-level-1")}" alt="鲸梦小屋室内" loading="lazy" decoding="async" />
             <span class="farm-room-window" aria-hidden="true"></span>
             <span class="farm-room-light" aria-hidden="true"></span>
             <span class="farm-room-rug" aria-hidden="true"></span>
@@ -3084,7 +3079,8 @@ function createFarmGame({
         ? actionFrame % frames.length
         : Math.min(actionFrame, frames.length - 1);
     const safeIndex = Math.max(0, frameIndex);
-    const idleSprite = form === "cute" ? character.idleSprite : "";
+    const idleSprite =
+      form === "cute" && !useMobileAssets ? character.idleSprite : "";
     if (idleSprite) {
       const key = `${character.id}:${form}:sprite:${idleSprite}`;
       if (avatarSpriteKey !== key) {
@@ -4146,7 +4142,7 @@ function createFarmGame({
       const character = selectedFarmCharacter();
       const metrics = getMetrics?.() || {};
       const marks = Number(metrics.characterMarks?.[character.id]) || 0;
-      const threshold = formId === "collection" ? 9 : 3;
+      const threshold = formThresholds[formId] || formThresholds.cute;
       const formName = formId === "collection" ? "典藏" : "鲸歌";
       showToast({
         title: "这个形态仍在沉睡",
@@ -5215,7 +5211,10 @@ function createFarmGame({
     const home = map.anchors.house;
     const npc = map.anchors.npc;
     const shrine = map.anchors.level;
-    const houseAssets = HOUSE_ASSETS[farm.houseLevel] || HOUSE_ASSETS[1];
+    const houseAssets = {
+      exterior: houseAssetUrl(`cottage-level-${farm.houseLevel}`),
+      interior: houseAssetUrl(`room-level-${farm.houseLevel}`),
+    };
     const houseDefinition =
       HOUSE_LEVELS.find((item) => item.level === farm.houseLevel) || HOUSE_LEVELS[0];
     const useMapHomeSprite = farm.houseLevel === 1 && Boolean(map.homeSprite);
@@ -5446,7 +5445,7 @@ function createFarmGame({
           style="--character-color:${character.color}"
           title="${unlocked ? `让${character.name}来到农场` : `${character.name}尚未抵达`}"
         >
-          <img src="${characterIdleFrames(character, "cute")[0]}" alt="" decoding="async" />
+          <img src="${characterIdleFrames(character, "cute")[0]}" alt="" loading="lazy" decoding="async" />
           <span>${character.name}</span>
           ${unlocked ? "" : '<i data-lucide="lock-keyhole"></i>'}
         </button>
@@ -5492,7 +5491,7 @@ function createFarmGame({
         const character = selectedFarmCharacter();
         const metrics = getMetrics?.() || {};
         const marks = Number(metrics.characterMarks?.[character.id]) || 0;
-        const threshold = form.id === "collection" ? 9 : form.id === "pretty" ? 3 : 1;
+        const threshold = formThresholds[form.id] || formThresholds.cute;
         return `
           <button
             type="button"
@@ -5522,7 +5521,10 @@ function createFarmGame({
     const characterImage = characterIdleFrames(character)[0];
     const houseDefinition =
       HOUSE_LEVELS.find((item) => item.level === farm.houseLevel) || HOUSE_LEVELS[0];
-    const houseAssets = HOUSE_ASSETS[farm.houseLevel] || HOUSE_ASSETS[1];
+    const houseAssets = {
+      exterior: houseAssetUrl(`cottage-level-${farm.houseLevel}`),
+      interior: houseAssetUrl(`room-level-${farm.houseLevel}`),
+    };
     Object.entries(farm.houseDecor || {}).forEach(([id, level]) => {
       elements.houseRoom.dataset[id] = String(clamp(Number(level) || 0, 0, 3));
     });
@@ -5531,7 +5533,7 @@ function createFarmGame({
     elements.houseExterior.src = houseAssets.exterior;
     elements.houseExterior.alt = `${houseDefinition.name}外观`;
     elements.houseExterior.onerror = () => {
-      const fallback = `./assets/farm/doubao/cottage-level-${farm.houseLevel}.png`;
+      const fallback = houseAssetUrl(`cottage-level-${farm.houseLevel}`);
       if (!elements.houseExterior.src.endsWith(fallback.slice(2))) {
         elements.houseExterior.src = fallback;
       }
@@ -5540,7 +5542,7 @@ function createFarmGame({
     elements.houseInterior.src = houseAssets.interior;
     elements.houseInterior.alt = `${houseDefinition.name}室内`;
     elements.houseInterior.onerror = () => {
-      const fallback = `./assets/farm/doubao/room-level-${farm.houseLevel}.png`;
+      const fallback = houseAssetUrl(`room-level-${farm.houseLevel}`);
       if (!elements.houseInterior.src.endsWith(fallback.slice(2))) {
         elements.houseInterior.src = fallback;
       }

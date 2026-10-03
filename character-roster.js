@@ -1,9 +1,19 @@
 (() => {
   const idleFrames = window.TIDAL_IDLE_FRAMES || {};
   const idleSprites = window.TIDAL_IDLE_SPRITES || {};
-  const collectionRoot = "./assets/characters/collection/final";
-  const prettyCutoutRoot = "./assets/characters/pretty/cutouts";
-  const cuteCutoutRoot = "./assets/characters/cute/cutouts";
+  const useMobileAssets = window.matchMedia(
+    "(max-width: 820px), (pointer: coarse)",
+  ).matches;
+  const collectionRoot = useMobileAssets
+    ? "./assets/mobile/characters/collection"
+    : "./assets/characters/collection/final";
+  const prettyCutoutRoot = useMobileAssets
+    ? "./assets/mobile/characters/pretty"
+    : "./assets/characters/pretty/cutouts";
+  const cuteCutoutRoot = useMobileAssets
+    ? "./assets/mobile/characters/cute"
+    : "./assets/characters/cute/cutouts";
+  const imageExtension = useMobileAssets ? ".webp" : ".png";
 
   const source = [
     {
@@ -194,9 +204,9 @@
       : [`${cuteCutoutRoot}/${character.id}-cute-cutout-v1.png`];
     return {
       ...character,
-      image: `${collectionRoot}/${character.id}-collection-final-v1.png`,
-      prettyImage: `${prettyCutoutRoot}/${character.id}-pretty-cutout-v1.png`,
-      cuteImage: `${cuteCutoutRoot}/${character.id}-cute-cutout-v1.png`,
+      image: `${collectionRoot}/${character.id}-collection-final-v1${imageExtension}`,
+      prettyImage: `${prettyCutoutRoot}/${character.id}-pretty-cutout-v1${imageExtension}`,
+      cuteImage: `${cuteCutoutRoot}/${character.id}-cute-cutout-v1${imageExtension}`,
       idleFrames: cuteFrames,
       idleSprite: idleSprites[character.id] || "",
     };

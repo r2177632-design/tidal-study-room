@@ -20,8 +20,8 @@ const COMPANION_TAB_LIMIT = 3;
 const COLLECTION_PAGE_SIZE = 4;
 const CHARACTER_FORM_THRESHOLDS = {
   cute: 1,
-  pretty: 3,
-  collection: 9,
+  pretty: 10,
+  collection: 20,
 };
 const CHARACTER_FORM_IDS = ["cute", "pretty", "collection"];
 const CHARACTER_FORM_LABELS = {
@@ -31,6 +31,9 @@ const CHARACTER_FORM_LABELS = {
 };
 const CHARACTER_MAX_MARKS = Math.max(...Object.values(CHARACTER_FORM_THRESHOLDS));
 const PERFECT_SETTLEMENT_INTERVAL_MS = 30_000;
+const USE_MOBILE_ASSETS = window.matchMedia(
+  "(max-width: 820px), (pointer: coarse)",
+).matches;
 
 function characterMarkMarkup(character, size = "md", extraClass = "") {
   return CHARACTER_MARKS?.markup(character, size, extraClass) || "";
@@ -45,6 +48,8 @@ const ICONS = {
 
 const elements = {
   app: document.querySelector("#app"),
+  iosInstallTip: document.querySelector("#iosInstallTip"),
+  iosInstallDismiss: document.querySelector("#iosInstallDismiss"),
   weekdayLabel: document.querySelector("#weekdayLabel"),
   dateLabel: document.querySelector("#dateLabel"),
   progressRing: document.querySelector("#progressRing"),
@@ -988,8 +993,10 @@ function startStageIdle(character) {
   const frames = stageIdleSources(character, art);
   if (!frames.length) return;
   const runId = stageIdleRunId;
+  const useIdleSprite =
+    art === "cute" && Boolean(character.idleSprite) && !USE_MOBILE_ASSETS;
   const fallbackSource =
-    art === "cute" && character.idleSprite
+    useIdleSprite
       ? character.cuteImage || characterArtSource(character, art)
       : frames[0];
   elements.portraitImage.src = fallbackSource;
@@ -997,7 +1004,7 @@ function startStageIdle(character) {
     "is-frame-idle",
     art === "cute" && frames.length > 0,
   );
-  if (art === "cute" && character.idleSprite) {
+  if (useIdleSprite) {
     preloadStageIdleSprite(character.idleSprite).then((image) => {
       if (
         runId !== stageIdleRunId ||
@@ -1652,7 +1659,7 @@ function collectionCardMarkup(character, metrics, current) {
       <span class="card-pet-mark">${characterMarkMarkup(character, "sm")}</span>
       ${
         character.image
-          ? `<img src="${character.image}" alt="${unlocked ? character.name : "未解锁伙伴"}" />`
+          ? `<img src="${character.image}" alt="${unlocked ? character.name : "未解锁伙伴"}" loading="lazy" decoding="async" />`
           : `<span class="card-pending" aria-hidden="true"><i data-lucide="scan-face"></i></span>`
       }
       ${
@@ -2992,6 +2999,28 @@ function bindEvents() {
   });
 }
 
+function initIosInstallTip() {
+  if (!elements.iosInstallTip || !elements.iosInstallDismiss) return;
+  const isIos =
+    /iPad|iPhone|iPod/.test(window.navigator.userAgent) ||
+    (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1);
+  const isStandalone =
+    window.navigator.standalone === true ||
+    window.matchMedia("(display-mode: standalone)").matches;
+  const dismissKey = "tidal-study-ios-install-dismissed";
+  if (!isIos || isStandalone || localStorage.getItem(dismissKey) === "1") return;
+
+  elements.iosInstallTip.hidden = false;
+  elements.iosInstallDismiss.addEventListener(
+    "click",
+    () => {
+      elements.iosInstallTip.hidden = true;
+      localStorage.setItem(dismissKey, "1");
+    },
+    { once: true },
+  );
+}
+
 function boot() {
   const startupSettlement = settlePastPerfectDays();
   farmGame = createFarmGame({
@@ -3005,6 +3034,7 @@ function boot() {
     getSelectedCharacterId: () => state.selectedCharacterId,
     onSelectCharacter: selectCharacter,
     characterIsUnlocked,
+    formThresholds: CHARACTER_FORM_THRESHOLDS,
     onStoryAction(action) {
       switchScreen("today");
       if (action === "create-task") {
@@ -3029,6 +3059,7 @@ function boot() {
   }
   bindEvents();
   initInteractiveLightEffects();
+  initIosInstallTip();
   resetPlanForm();
   const hashScreen = window.location.hash.slice(1);
   const initialScreen = ["plans", "farm"].includes(hashScreen)
@@ -3037,10 +3068,23 @@ function boot() {
   switchScreen(initialScreen);
   refreshIcons();
   window.__tidalStudyBooted = true;
-  if ("serviceWorker" in navigator && window.isSecureContext) {
-    navigator.serviceWorker.register("./sw.js").catch(() => {
-      // 离线安装不可用时继续使用普通网页模式。
-    });
+  const canRegisterServiceWorker =
+    "serviceWorker" in navigator &&
+    (window.location.protocol === "https:" ||
+      ["localhost", "127.0.0.1"].includes(window.location.hostname));
+  if (canRegisterServiceWorker) {
+    const registerServiceWorker = () => {
+      navigator.serviceWorker
+        .register("./sw.js", { scope: "./" })
+        .catch(() => {
+          // 注册失败时仍继续使用普通网页模式。
+        });
+    };
+    if (document.readyState === "complete") {
+      registerServiceWorker();
+    } else {
+      window.addEventListener("load", registerServiceWorker, { once: true });
+    }
   }
   window.setInterval(
     () => runPerfectSettlement({ render: true, notify: true }),
