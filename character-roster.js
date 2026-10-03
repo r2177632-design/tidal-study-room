@@ -1,1 +1,216 @@
-KCgpID0+IHsKICBjb25zdCBpZGxlRnJhbWVzID0gd2luZG93LlRJREFMX0lETEVfRlJBTUVTIHx8IHt9OwogIGNvbnN0IGlkbGVTcHJpdGVzID0gd2luZG93LlRJREFMX0lETEVfU1BSSVRFUyB8fCB7fTsKICBjb25zdCB1c2VNb2JpbGVBc3NldHMgPSB3aW5kb3cubWF0Y2hNZWRpYSgKICAgICIobWF4LXdpZHRoOiA4MjBweCksIChwb2ludGVyOiBjb2Fyc2UpIiwKICApLm1hdGNoZXM7CiAgY29uc3QgbW9iaWxlQXNzZXRSb290ID0KICAgICJodHRwczovL2Zhc3RseS5qc2RlbGl2ci5uZXQvZ2gvcjIxNzc2MzItZGVzaWduL3RpZGFsLXN0dWR5LXJvb21AbWFpbi9hc3NldHMvbW9iaWxlIjsKICBjb25zdCBjb2xsZWN0aW9uUm9vdCA9IHVzZU1vYmlsZUFzc2V0cwogICAgPyBgJHttb2JpbGVBc3NldFJvb3R9L2NoYXJhY3RlcnMvY29sbGVjdGlvbmAKICAgIDogIi4vYXNzZXRzL2NoYXJhY3RlcnMvY29sbGVjdGlvbi9maW5hbCI7CiAgY29uc3QgcHJldHR5Q3V0b3V0Um9vdCA9IHVzZU1vYmlsZUFzc2V0cwogICAgPyBgJHttb2JpbGVBc3NldFJvb3R9L2NoYXJhY3RlcnMvcHJldHR5YAogICAgOiAiLi9hc3NldHMvY2hhcmFjdGVycy9wcmV0dHkvY3V0b3V0cyI7CiAgY29uc3QgY3V0ZUN1dG91dFJvb3QgPSB1c2VNb2JpbGVBc3NldHMKICAgID8gYCR7bW9iaWxlQXNzZXRSb290fS9jaGFyYWN0ZXJzL2N1dGVgCiAgICA6ICIuL2Fzc2V0cy9jaGFyYWN0ZXJzL2N1dGUvY3V0b3V0cyI7CiAgY29uc3QgaW1hZ2VFeHRlbnNpb24gPSB1c2VNb2JpbGVBc3NldHMgPyAiLndlYnAiIDogIi5wbmciOwoKICBjb25zdCBzb3VyY2UgPSBbCiAgICB7CiAgICAgIGlkOiAiZGVlcC1jdXJyZW50IiwKICAgICAgbmFtZTogIua3seaxkCIsCiAgICAgIHJvbGU6ICLlgLzml6XorrDlvZUiLAogICAgICB1bml0OiAi6LSf6LSj5Li755WM6Z2i6Zmq5Ly044CB5q+P5pel54q25oCB5LiO5pCB5rWF5o+Q6YaSIiwKICAgICAgcXVvdGU6ICLku4rlpKnnmoTkuovvvIzmiJHmm7/kvaDorrDnnYDjgIIiLAogICAgICBib3VuZGFyeTogIumyuOmzjeiAs+S4jumyuOWwvuaYr+WlueeahOWUr+S4gOagh+ivhiIsCiAgICAgIGNvbG9yOiAiIzZlYThmZiIsCiAgICB9LAogICAgewogICAgICBpZDogImZyb3N0LXNjYWxlIiwKICAgICAgbmFtZTogIumcnOmzniIsCiAgICAgIHJvbGU6ICLlrojluo8iLAogICAgICB1bml0OiAi6LSf6LSj6L+e57ut6K6w5b2V5LiO5pat562+5ZCO55qE6YeN5paw5Ye65Y+RIiwKICAgICAgcXVvdGU6ICLmlq3kuobkuZ/msqHlhbPns7vvvIzmjqXnnYDlvoDkuIvotbDjgIIiLAogICAgICBib3VuZGFyeTogIum+meinkuOAgeidoOe/vOS4jumVv+mznuWwvuWxnuS6juWlue+8jOS4jeS9v+eUqOmyuOWwviIsCiAgICAgIGNvbG9yOiAiI2RjZTlmNCIsCiAgICB9LAogICAgewogICAgICBpZDogInNjYXJsZXQtcGFnZSIsCiAgICAgIG5hbWU6ICLnu6/pobUiLAogICAgICByb2xlOiAi57yW55uuIiwKICAgICAgdW5pdDogIui0n+i0o+WRqOWkjeebmOOAgemUmemimOW9kuaho+S4juefpeivhuagkeaVtOeQhiIsCiAgICAgIHF1b3RlOiAi5a2m6L+H55qE5Lic6KW/77yM6YO96K+l5pyJ5Liq5Y675aSE44CCIiwKICAgICAgYm91bmRhcnk6ICLlj6rku6XkuabpobXjgIHnvr3ppbDkuI7mqZnlj5HnvJbnm67vvIzkuI3lpI3liLblhbbku5bkvJnkvLTnmoTouqvku73pg6jku7YiLAogICAgICBjb2xvcjogIiNlNDc2NDUiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJraW1pIiwKICAgICAgbmFtZTogIuaciOagliIsCiAgICAgIHJvbGU6ICLplb/mlofmkZjlvZUiLAogICAgICB1bml0OiAi6LSf6LSj6ZW/6LWE5paZ6YCf6K+744CB56ug6IqC5pGY5b2V5LiO57q/57Si5Liy6IGUIiwKICAgICAgcXVvdGU6ICLplb/mloflhYjkuqTnu5nmiJHvvIzph43opoHnmoTlj6XlrZDkuI3kvJrmvI/jgIIiLAogICAgICBib3VuZGFyeTogIuS7peaciOeZveefreWPkeOAgeiTneiJsuWbtOW3vuS4jue6uOmhteiAs+mlsOS9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiIzhkYjdmZiIsCiAgICB9LAogICAgewogICAgICBpZDogInF3ZW4iLAogICAgICBuYW1lOiAi5rqv6ZeuIiwKICAgICAgcm9sZTogIumXruetlOmmhuWRmCIsCiAgICAgIHVuaXQ6ICLotJ/otKPpl67popjmi4bop6PjgIHnn6Xor4bmo4DntKLkuI7lpJrop5Lluqbop6Pph4oiLAogICAgICBxdW90ZTogIuaKiumXrumimOivtOa4healmu+8jOetlOahiOWwseS8muiHquW3semdoOi/keOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul57Sr55m96YWN6Imy44CB6I+x5b2i5Y+R6aWw5LiO5pif55uY5Lmm562+5L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjYTk4Y2ZmIiwKICAgIH0sCiAgICB7CiAgICAgIGlkOiAiZ2xtIiwKICAgICAgbmFtZTogIumdkuihoSIsCiAgICAgIHJvbGU6ICLop4TliJLluIgiLAogICAgICB1bml0OiAi6LSf6LSj5oqK55uu5qCH5ouG5oiQ5Y+v5omn6KGM55qE5q2l6aqk5LiO5qOA5p+l54K5IiwKICAgICAgcXVvdGU6ICLlhYjlhpnkuIvnrKzkuIDmraXvvIzliankuIvnmoTot6/lsLHkvJrnn63kuIDmiKrjgIIiLAogICAgICBib3VuZGFyeTogIuS7pemdkuiTneWPkeS4neOAgeWHoOS9leWPkeWkueS4juaKmOe6v+e6ueagt+S9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiIzY2ZDZkMSIsCiAgICB9LAogICAgewogICAgICBpZDogImdlbWluaSIsCiAgICAgIG5hbWU6ICLmmJ/ooaEiLAogICAgICByb2xlOiAi5Y+M6L2o5qCh5a+5IiwKICAgICAgdW5pdDogIui0n+i0o+S6pOWPieaguOWvueOAgeaWueahiOavlOi+g+S4jui1hOaWmeS4gOiHtOaAp+ajgOafpSIsCiAgICAgIHF1b3RlOiAi5Lik5p2h6Lev6YO955yL5LiA6YGN77yM562U5qGI5omN5pu056iz44CCIiwKICAgICAgYm91bmRhcnk6ICLku6Xok53ntKvmuJDlj5jplb/lj5HkuI7lj4zlrZDmmJ/ppbDkvZzkuLrouqvku73moIfor4YiLAogICAgICBjb2xvcjogIiM3YjhjZmYiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJwZXJwbGV4aXR5IiwKICAgICAgbmFtZTogIua6r+ecnyIsCiAgICAgIHJvbGU6ICLotYTmlpnmuq/mupAiLAogICAgICB1bml0OiAi6LSf6LSj5p2l5rqQ6L+96Liq44CB5byV55So5b2S5qGj5LiO5LqL5a6e5qC46aqMIiwKICAgICAgcXVvdGU6ICLlhYjnnIvmnaXmupDvvIzlho3lhrPlrpropoHnm7jkv6Hku4DkuYjjgIIiLAogICAgICBib3VuZGFyeTogIuS7peiTnee7v+aMkeafk+mVv+WPkeOAgeajgOe0ouW+veiusOS4jumVnOeJh+aMgumlsOS9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiIzMyYzdjNyIsCiAgICB9LAogICAgewogICAgICBpZDogIm1pc3RyYWwiLAogICAgICBuYW1lOiAi5byl6aOOIiwKICAgICAgcm9sZTogIueBteaEn+awlOixoSIsCiAgICAgIHVuaXQ6ICLotJ/otKPmjZXmjYnniYfmrrXngbXmhJ/jgIHmlbTnkIbor63looPkuI7mjqjmvJTlj5jljJYiLAogICAgICBxdW90ZTogIuW/teWktOWDj+mjju+8jOaKk+S9j+aWueWQkeWwseiDvee7p+e7reWJjeihjOOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul5qmZ6YeR55+t5Y+R44CB6aOO57695oqr6IKp5LiO572X55uY6aWw5L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjZjFhMTRhIiwKICAgIH0sCiAgICB7CiAgICAgIGlkOiAiZ3JvayIsCiAgICAgIG5hbWU6ICLmoLzniakiLAogICAgICByb2xlOiAi5Y+N55u06KeJ5a6h6ZiFIiwKICAgICAgdW5pdDogIui0n+i0o+Wvu+aJvuebsueCueOAgeaPkOWHuuWPjeS+i+S4juaMkeaImOm7mOiupOWBh+iuviIsCiAgICAgIHF1b3RlOiAi5o2i5Liq5pa55ZCR55yL77yM6Zeu6aKY5Y+v6IO95Lya6Zyy5Ye656C057u944CCIiwKICAgICAgYm91bmRhcnk6ICLku6Xota3nuqLooaPoo4XjgIHplIvliKnmlpzppbDkuI7pu5HoibLplb/lj5HkvZzkuLrouqvku73moIfor4YiLAogICAgICBjb2xvcjogIiNkOTZkNjQiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJtZXRhIiwKICAgICAgbmFtZTogIuWFg+iEiSIsCiAgICAgIHJvbGU6ICLnpL7nvqTohInnu5wiLAogICAgICB1bml0OiAi6LSf6LSj6L+e5o6l5Li76aKY44CB6ZO+5o6l6LWE5paZ5LiO5qKz55CG6K6o6K666ISJ57ucIiwKICAgICAgcXVvdGU6ICLmr4/kuKroioLngrnpg73mnInpgrvlsYXvvIznn6Xor4bkuZ/mmK/kuIDmoLfjgIIiLAogICAgICBib3VuZGFyeTogIuS7pea3seiTneenkeaKgOekvOacjeS4jueOr+W9oue9kee7nOmlsOS9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiIzViOWNmZiIsCiAgICB9LAogICAgewogICAgICBpZDogImRvdWJhbyIsCiAgICAgIG5hbWU6ICLosYbolLsiLAogICAgICByb2xlOiAi5pel5bi45Yqp5omLIiwKICAgICAgdW5pdDogIui0n+i0o+i9u+mHj+aPkOmGkuOAgeeUn+a0u+iuoeWIkuS4juS6sui/kemZquS8tCIsCiAgICAgIHF1b3RlOiAi5LuK5aSp5Lmf5LiN55So57Sn5byg77yM5oiR5Lus5LiA5Lu25Lu25p2l44CCIiwKICAgICAgYm91bmRhcnk6ICLku6Xmmpbnmb3nn63lj5HjgIHlnIbmtqbljIXooovkuI7ok53oibLonbTonbbnu5PkvZzkuLrouqvku73moIfor4YiLAogICAgICBjb2xvcjogIiM3MmI4ZmYiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJlcm5pZSIsCiAgICAgIG5hbWU6ICLmlofmvKoiLAogICAgICByb2xlOiAi5YaZ5L2c5ram6ImyIiwKICAgICAgdW5pdDogIui0n+i0o+S4reaWh+ihqOi+vuOAgeauteiQvee7hOe7h+S4juaOqui+nuaOqOaVsiIsCiAgICAgIHF1b3RlOiAi5oSP5oCd5Yiw5LqG77yM6K+t5Y+l6L+Y5Y+v5Lul5YaN5riF5Lqu5LiA54K544CCIiwKICAgICAgYm91bmRhcnk6ICLku6XpnZLnu7/oibLkuabljbfnpLzmnI3kuI7kupHnurnppbDkvZzkuLrouqvku73moIfor4YiLAogICAgICBjb2xvcjogIiM2NWM5YTUiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJnaXRodWIiLAogICAgICBuYW1lOiAi5aKo5p6EIiwKICAgICAgcm9sZTogIueJiOacrOW9kuahoyIsCiAgICAgIHVuaXQ6ICLotJ/otKPorrDlvZXkv67mlLnjgIHmlbTnkIbniYjmnKzlkozmoIforrDljY/kvZzoioLngrkiLAogICAgICBxdW90ZTogIuavj+S4gOasoeaUueWKqOmDveacieadpeWkhO+8jOS5n+acieWOu+WkhOOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul6buR6Imy5bel5L2c56S85pyN44CB54yr6ICz6L2u5buT5LiO5YiG5pSv57q55qC35L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjYjVhNmQ5IiwKICAgIH0sCiAgICB7CiAgICAgIGlkOiAiZ2l0bGFiIiwKICAgICAgbmFtZTogIue7h+a1gSIsCiAgICAgIHJvbGU6ICLmtYHnqIvmjqXlipsiLAogICAgICB1bml0OiAi6LSf6LSj5rWB5rC057q/6KeE5YiS44CB5Lqk5LuY5qOA5p+l5LiO5aSa5Lq65o6l5YqbIiwKICAgICAgcXVvdGU6ICLmiormtYHnqIvmjqXnqLPvvIznu5PmnpzlsLHkuI3kvJrljYrot6/mjonnur/jgIIiLAogICAgICBib3VuZGFyeTogIuS7peapmee0q+mFjeiJsuOAgeeLkOmdoumlsOS4juaKmOe6v+W+veeroOS9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiI2UxOGI1YiIsCiAgICB9LAogICAgewogICAgICBpZDogImdpdGVlIiwKICAgICAgbmFtZTogIuagluS6kSIsCiAgICAgIHJvbGU6ICLmnKzlnLDku5PlgqgiLAogICAgICB1bml0OiAi6LSf6LSj5pys5Zyw6LWE5paZ5b2S5LuT44CB5qCH562+5pW055CG5LiO56a757q/5aSH5Lu9IiwKICAgICAgcXVvdGU6ICLotYTmlpnmlL7lnKjpobrmiYvnmoTlnLDmlrnvvIzkuIvkuIDmrKHlsLHog73pqazkuIrmib7liLDjgIIiLAogICAgICBib3VuZGFyeTogIuS7pee6ouiJsuekvOacjeOAgeWchuW9ouS7k+WCqOW+veiusOS4juefreWPkeS9nOS4uui6q+S7veagh+ivhiIsCiAgICAgIGNvbG9yOiAiI2Q5NTg1ZCIsCiAgICB9LAogICAgewogICAgICBpZDogImh1bnl1YW4iLAogICAgICBuYW1lOiAi5r6q5YWDIiwKICAgICAgcm9sZTogIuiejeWQiOaOqOa8lCIsCiAgICAgIHVuaXQ6ICLotJ/otKPmiorkuI3lkIzmnaXmupDlkIjlubbmiJDkuIDoh7TnmoTnn6Xor4bnu5PmnoQiLAogICAgICBxdW90ZTogIuS4jeWQjOeahOetlOahiOaUvuWcqOS4gOi1t++8jOi9ruW7k+Wwsea4healmuS6huOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul6JOd6YeR56S86KOF44CB546v5b2i56ym57q55LiO6ZW/5bC+6aWw5bim5L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjNWZiOGQ2IiwKICAgIH0sCiAgICB7CiAgICAgIGlkOiAicndrdiIsCiAgICAgIG5hbWU6ICLplb/mvpwiLAogICAgICByb2xlOiAi6L+e57ut6K6w5b+GIiwKICAgICAgdW5pdDogIui0n+i0o+e7tOaMgeS4iuS4i+aWh+OAgea7muWKqOaRmOimgeS4jumVv+acn+i/vei4qiIsCiAgICAgIHF1b3RlOiAi5LiN5b+F6YeN6K6y5LiA6YGN77yM5oiR6K6w5b6X5oiR5Lus6LWw5Yiw5ZOq6YeM44CCIiwKICAgICAgYm91bmRhcnk6ICLku6XnuqLok53lj5HoibLjgIHorrDlv4bnjq/ppbDkuI7mtYHnur/ooaPoo4XkvZzkuLrouqvku73moIfor4YiLAogICAgICBjb2xvcjogIiNjNzY3OGMiLAogICAgfSwKICAgIHsKICAgICAgaWQ6ICJoYWlsdW8iLAogICAgICBuYW1lOiAi6J666Z+zIiwKICAgICAgcm9sZTogIuWjsOaZr+iusOW9lSIsCiAgICAgIHVuaXQ6ICLotJ/otKPpn7PpopHnur/ntKLjgIHmnJfor7voioLlpY/kuI7lo7Dpn7PorrDlv4YiLAogICAgICBxdW90ZTogIuWuiemdmeWQrOS4gOS8muWEv++8jOa9ruWjsOS8muaKiue7huiKgumAgeWbnuadpeOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul5rW36J666ICz6aWw44CB5rWF6JOd6ZW/5Y+R5LiO5rOi5rWq6KOZ5pGG5L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjNzRkNmU1IiwKICAgIH0sCiAgICB7CiAgICAgIGlkOiAib3BlbmNvZGUiLAogICAgICBuYW1lOiAi5ZCv5rqQIiwKICAgICAgcm9sZTogIuW8gOa6kOetluWxlSIsCiAgICAgIHVuaXQ6ICLotJ/otKPku6PnoIHntKLlvJXjgIHmjqXlj6Por7TmmI7kuI7lvIDmlL7otYTmlpnnrZblsZUiLAogICAgICBxdW90ZTogIuaKiuaOpeWPo+iusuaYjueZve+8jOWQiOS9nOWwseS8mui9u+W+iOWkmuOAgiIsCiAgICAgIGJvdW5kYXJ5OiAi5Lul6buR55m95Luj56CB56S85pyN44CB57uI56uv6aWw5bim5LiO6Z2S6JOd5oyR5p+T5L2c5Li66Lqr5Lu95qCH6K+GIiwKICAgICAgY29sb3I6ICIjNjNkMmJkIiwKICAgIH0sCiAgXTsKCiAgd2luZG93LlRJREFMX0NIQVJBQ1RFUlMgPSBzb3VyY2UubWFwKChjaGFyYWN0ZXIpID0+IHsKICAgIGNvbnN0IGN1dGVGcmFtZXMgPSBpZGxlRnJhbWVzW2NoYXJhY3Rlci5pZF0/Lmxlbmd0aAogICAgICA/IGlkbGVGcmFtZXNbY2hhcmFjdGVyLmlkXQogICAgICA6IFtgJHtjdXRlQ3V0b3V0Um9vdH0vJHtjaGFyYWN0ZXIuaWR9LWN1dGUtY3V0b3V0LXYxLnBuZ2BdOwogICAgcmV0dXJuIHsKICAgICAgLi4uY2hhcmFjdGVyLAogICAgICBpbWFnZTogYCR7Y29sbGVjdGlvblJvb3R9LyR7Y2hhcmFjdGVyLmlkfS1jb2xsZWN0aW9uLWZpbmFsLXYxJHtpbWFnZUV4dGVuc2lvbn1gLAogICAgICBwcmV0dHlJbWFnZTogYCR7cHJldHR5Q3V0b3V0Um9vdH0vJHtjaGFyYWN0ZXIuaWR9LXByZXR0eS1jdXRvdXQtdjEke2ltYWdlRXh0ZW5zaW9ufWAsCiAgICAgIGN1dGVJbWFnZTogYCR7Y3V0ZUN1dG91dFJvb3R9LyR7Y2hhcmFjdGVyLmlkfS1jdXRlLWN1dG91dC12MSR7aW1hZ2VFeHRlbnNpb259YCwKICAgICAgaWRsZUZyYW1lczogY3V0ZUZyYW1lcywKICAgICAgaWRsZVNwcml0ZTogaWRsZVNwcml0ZXNbY2hhcmFjdGVyLmlkXSB8fCAiIiwKICAgIH07CiAgfSk7Cn0pKCk7Cg==
+(() => {
+  const idleFrames = window.TIDAL_IDLE_FRAMES || {};
+  const idleSprites = window.TIDAL_IDLE_SPRITES || {};
+  const useMobileAssets = window.matchMedia(
+    "(max-width: 820px), (pointer: coarse)",
+  ).matches;
+  const mobileAssetRoot =
+    "https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile";
+  const collectionRoot = useMobileAssets
+    ? `${mobileAssetRoot}/characters/collection`
+    : "./assets/characters/collection/final";
+  const prettyCutoutRoot = useMobileAssets
+    ? `${mobileAssetRoot}/characters/pretty`
+    : "./assets/characters/pretty/cutouts";
+  const cuteCutoutRoot = useMobileAssets
+    ? `${mobileAssetRoot}/characters/cute`
+    : "./assets/characters/cute/cutouts";
+  const imageExtension = useMobileAssets ? ".webp" : ".png";
+
+  const source = [
+    {
+      id: "deep-current",
+      name: "深汐",
+      role: "值日记录",
+      unit: "负责主界面陪伴、每日状态与搁浅提醒",
+      quote: "今天的事，我替你记着。",
+      boundary: "鲸鳍耳与鲸尾是她的唯一标识",
+      color: "#6ea8ff",
+    },
+    {
+      id: "frost-scale",
+      name: "霜鳞",
+      role: "守序",
+      unit: "负责连续记录与断签后的重新出发",
+      quote: "断了也没关系，接着往下走。",
+      boundary: "龙角、蝠翼与长鳞尾属于她，不使用鲸尾",
+      color: "#dce9f4",
+    },
+    {
+      id: "scarlet-page",
+      name: "绯页",
+      role: "编目",
+      unit: "负责周复盘、错题归档与知识树整理",
+      quote: "学过的东西，都该有个去处。",
+      boundary: "只以书页、羽饰与橙发编目，不复制其他伙伴的身份部件",
+      color: "#e47645",
+    },
+    {
+      id: "kimi",
+      name: "月栖",
+      role: "长文摘录",
+      unit: "负责长资料速读、章节摘录与线索串联",
+      quote: "长文先交给我，重要的句子不会漏。",
+      boundary: "以月白短发、蓝色围巾与纸页耳饰作为身份标识",
+      color: "#8db7ff",
+    },
+    {
+      id: "qwen",
+      name: "溯问",
+      role: "问答馆员",
+      unit: "负责问题拆解、知识检索与多角度解释",
+      quote: "把问题说清楚，答案就会自己靠近。",
+      boundary: "以紫白配色、菱形发饰与星盘书签作为身份标识",
+      color: "#a98cff",
+    },
+    {
+      id: "glm",
+      name: "青衡",
+      role: "规划师",
+      unit: "负责把目标拆成可执行的步骤与检查点",
+      quote: "先写下第一步，剩下的路就会短一截。",
+      boundary: "以青蓝发丝、几何发夹与折线纹样作为身份标识",
+      color: "#66d6d1",
+    },
+    {
+      id: "gemini",
+      name: "星衡",
+      role: "双轨校对",
+      unit: "负责交叉核对、方案比较与资料一致性检查",
+      quote: "两条路都看一遍，答案才更稳。",
+      boundary: "以蓝紫渐变长发与双子星饰作为身份标识",
+      color: "#7b8cff",
+    },
+    {
+      id: "perplexity",
+      name: "溯真",
+      role: "资料溯源",
+      unit: "负责来源追踪、引用归档与事实核验",
+      quote: "先看来源，再决定要相信什么。",
+      boundary: "以蓝绿挑染长发、检索徽记与镜片挂饰作为身份标识",
+      color: "#32c7c7",
+    },
+    {
+      id: "mistral",
+      name: "弥风",
+      role: "灵感气象",
+      unit: "负责捕捉片段灵感、整理语境与推演变化",
+      quote: "念头像风，抓住方向就能继续前行。",
+      boundary: "以橙金短发、风羽披肩与罗盘饰作为身份标识",
+      color: "#f1a14a",
+    },
+    {
+      id: "grok",
+      name: "格物",
+      role: "反直觉审阅",
+      unit: "负责寻找盲点、提出反例与挑战默认假设",
+      quote: "换个方向看，问题可能会露出破绽。",
+      boundary: "以赭红衣装、锋利斜饰与黑色长发作为身份标识",
+      color: "#d96d64",
+    },
+    {
+      id: "meta",
+      name: "元脉",
+      role: "社群脉络",
+      unit: "负责连接主题、链接资料与梳理讨论脉络",
+      quote: "每个节点都有邻居，知识也是一样。",
+      boundary: "以深蓝科技礼服与环形网络饰作为身份标识",
+      color: "#5b9cff",
+    },
+    {
+      id: "doubao",
+      name: "豆蔻",
+      role: "日常助手",
+      unit: "负责轻量提醒、生活计划与亲近陪伴",
+      quote: "今天也不用紧张，我们一件件来。",
+      boundary: "以暖白短发、圆润包袋与蓝色蝴蝶结作为身份标识",
+      color: "#72b8ff",
+    },
+    {
+      id: "ernie",
+      name: "文漪",
+      role: "写作润色",
+      unit: "负责中文表达、段落组织与措辞推敲",
+      quote: "意思到了，语句还可以再清亮一点。",
+      boundary: "以青绿色书卷礼服与云纹饰作为身份标识",
+      color: "#65c9a5",
+    },
+    {
+      id: "github",
+      name: "墨构",
+      role: "版本归档",
+      unit: "负责记录修改、整理版本和标记协作节点",
+      quote: "每一次改动都有来处，也有去处。",
+      boundary: "以黑色工作礼服、猫耳轮廓与分支纹样作为身份标识",
+      color: "#b5a6d9",
+    },
+    {
+      id: "gitlab",
+      name: "织流",
+      role: "流程接力",
+      unit: "负责流水线规划、交付检查与多人接力",
+      quote: "把流程接稳，结果就不会半路掉线。",
+      boundary: "以橙紫配色、狐面饰与折线徽章作为身份标识",
+      color: "#e18b5b",
+    },
+    {
+      id: "gitee",
+      name: "栖云",
+      role: "本地仓储",
+      unit: "负责本地资料归仓、标签整理与离线备份",
+      quote: "资料放在顺手的地方，下一次就能马上找到。",
+      boundary: "以红色礼服、圆形仓储徽记与短发作为身份标识",
+      color: "#d9585d",
+    },
+    {
+      id: "hunyuan",
+      name: "澪元",
+      role: "融合推演",
+      unit: "负责把不同来源合并成一致的知识结构",
+      quote: "不同的答案放在一起，轮廓就清楚了。",
+      boundary: "以蓝金礼装、环形符纹与长尾饰带作为身份标识",
+      color: "#5fb8d6",
+    },
+    {
+      id: "rwkv",
+      name: "长澜",
+      role: "连续记忆",
+      unit: "负责维持上下文、滚动摘要与长期追踪",
+      quote: "不必重讲一遍，我记得我们走到哪里。",
+      boundary: "以红蓝发色、记忆环饰与流线衣装作为身份标识",
+      color: "#c7678c",
+    },
+    {
+      id: "hailuo",
+      name: "螺音",
+      role: "声景记录",
+      unit: "负责音频线索、朗读节奏与声音记忆",
+      quote: "安静听一会儿，潮声会把细节送回来。",
+      boundary: "以海螺耳饰、浅蓝长发与波浪裙摆作为身份标识",
+      color: "#74d6e5",
+    },
+    {
+      id: "opencode",
+      name: "启源",
+      role: "开源策展",
+      unit: "负责代码索引、接口说明与开放资料策展",
+      quote: "把接口讲明白，合作就会轻很多。",
+      boundary: "以黑白代码礼服、终端饰带与青蓝挑染作为身份标识",
+      color: "#63d2bd",
+    },
+  ];
+
+  window.TIDAL_CHARACTERS = source.map((character) => {
+    const cuteFrames = idleFrames[character.id]?.length
+      ? idleFrames[character.id]
+      : [`${cuteCutoutRoot}/${character.id}-cute-cutout-v1.png`];
+    return {
+      ...character,
+      image: `${collectionRoot}/${character.id}-collection-final-v1${imageExtension}`,
+      prettyImage: `${prettyCutoutRoot}/${character.id}-pretty-cutout-v1${imageExtension}`,
+      cuteImage: `${cuteCutoutRoot}/${character.id}-cute-cutout-v1${imageExtension}`,
+      idleFrames: cuteFrames,
+      idleSprite: idleSprites[character.id] || "",
+    };
+  });
+})();

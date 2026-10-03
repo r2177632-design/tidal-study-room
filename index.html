@@ -1,1 +1,543 @@
-PCFkb2N0eXBlIGh0bWw+DQo8aHRtbCBsYW5nPSJ6aC1DTiI+DQogIDxoZWFkPg0KICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04IiAvPg0KICAgIDxtZXRhCiAgICAgIG5hbWU9InZpZXdwb3J0IgogICAgICBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLCB2aWV3cG9ydC1maXQ9Y292ZXIiCiAgICAvPgogICAgPG1ldGENCiAgICAgIG5hbWU9ImRlc2NyaXB0aW9uIg0KICAgICAgY29udGVudD0i5Liq5Lq65a2m5Lmg55uR552j5LiO6bK46bG85aiY5pS26JeP5bel5L2c5Y+wIg0KICAgIC8+CiAgICA8bWV0YSBuYW1lPSJ0aGVtZS1jb2xvciIgY29udGVudD0iIzA2MWIyMSIgLz4KICAgIDxtZXRhIG5hbWU9Im1vYmlsZS13ZWItYXBwLWNhcGFibGUiIGNvbnRlbnQ9InllcyIgLz4KICAgIDxtZXRhIG5hbWU9ImFwcGxlLW1vYmlsZS13ZWItYXBwLWNhcGFibGUiIGNvbnRlbnQ9InllcyIgLz4KICAgIDxtZXRhIG5hbWU9ImFwcGxlLW1vYmlsZS13ZWItYXBwLXN0YXR1cy1iYXItc3R5bGUiIGNvbnRlbnQ9ImJsYWNrLXRyYW5zbHVjZW50IiAvPgogICAgPG1ldGEgbmFtZT0iYXBwbGUtbW9iaWxlLXdlYi1hcHAtdGl0bGUiIGNvbnRlbnQ9Iua9ruaxkOS5puaWiyIgLz4KICAgIDx0aXRsZT7mva7msZDkuabmlos8L3RpdGxlPgogICAgPGxpbmsgcmVsPSJpY29uIiBocmVmPSIuL2Fzc2V0cy9sYXVuY2hlci90aWRhbC1zdHVkeS5pY28iIHNpemVzPSJhbnkiIC8+CiAgICA8bGluayByZWw9ImFwcGxlLXRvdWNoLWljb24iIGhyZWY9Ii4vYXNzZXRzL2xhdW5jaGVyL3RpZGFsLXN0dWR5LTE4MC5wbmciIC8+CiAgICA8bGluayByZWw9Im1hbmlmZXN0IiBocmVmPSIuL21hbmlmZXN0LndlYm1hbmlmZXN0IiAvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIuL3N0eWxlcy5jc3M/dj0yMDI2MTAwMzIyMzAwMCIgLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iLi9mYXJtLmNzcz92PTIwMjYxMDAzMjIzMDAwIiAvPgogICAgPHNjcmlwdCBzcmM9Ii4vdmVuZG9yL2x1Y2lkZS5qcyI+PC9zY3JpcHQ+DQogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9Im9jZWFuLW5vaXNlIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PC9kaXY+CiAgICA8YXNpZGUgY2xhc3M9Imlvcy1pbnN0YWxsLXRpcCIgaWQ9Imlvc0luc3RhbGxUaXAiIGhpZGRlbj4KICAgICAgPGkgZGF0YS1sdWNpZGU9InNoYXJlIj48L2k+CiAgICAgIDxzcGFuPuWcqCBTYWZhcmkg54K54oCc5YiG5Lqr4oCd77yM5YaN6YCJ4oCc5re75Yqg5Yiw5Li75bGP5bmV4oCdPC9zcGFuPgogICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgaWQ9Imlvc0luc3RhbGxEaXNtaXNzIiBhcmlhLWxhYmVsPSLlhbPpl63lronoo4Xmj5DnpLoiPgogICAgICAgIDxpIGRhdGEtbHVjaWRlPSJ4Ij48L2k+CiAgICAgIDwvYnV0dG9uPgogICAgPC9hc2lkZT4KICAgIDxkaXYgY2xhc3M9ImFwcC1zaGVsbCIgaWQ9ImFwcCI+CiAgICAgIDxoZWFkZXIgY2xhc3M9InRvcGJhciI+DQogICAgICAgIDxkaXYgY2xhc3M9ImJyYW5kLWxvY2t1cCI+DQogICAgICAgICAgPGRpdiBjbGFzcz0iYnJhbmQtbWFyayIgYXJpYS1oaWRkZW49InRydWUiPg0KICAgICAgICAgICAgPHNwYW4+PC9zcGFuPg0KICAgICAgICAgICAgPHNwYW4+PC9zcGFuPg0KICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICA8cCBjbGFzcz0iYnJhbmQta2lja2VyIj5USURBTCBTVFVEWSBST09NPC9wPg0KICAgICAgICAgICAgPGgxPua9ruaxkOS5puaWizwvaDE+DQogICAgICAgICAgPC9kaXY+DQogICAgICAgIDwvZGl2Pg0KDQogICAgICAgIDxkaXYgY2xhc3M9InRvcGJhci1jZW50ZXIiPg0KICAgICAgICAgIDxkaXYgY2xhc3M9ImRhdGUtYmxvY2siPg0KICAgICAgICAgICAgPHNwYW4gaWQ9IndlZWtkYXlMYWJlbCI+5pif5pyf5LiJPC9zcGFuPg0KICAgICAgICAgICAgPHN0cm9uZyBpZD0iZGF0ZUxhYmVsIj4wOeaciDMw5pelPC9zdHJvbmc+DQogICAgICAgICAgPC9kaXY+DQogICAgICAgICAgPGRpdiBjbGFzcz0iZGF5LXByb2dyZXNzIiBhcmlhLWxhYmVsPSLku4rml6Xku7vliqHov5vluqYiPg0KICAgICAgICAgICAgPGRpdiBjbGFzcz0icHJvZ3Jlc3MtcmluZyIgaWQ9InByb2dyZXNzUmluZyI+DQogICAgICAgICAgICAgIDxzcGFuIGlkPSJwcm9ncmVzc1ZhbHVlIj4wJTwvc3Bhbj4NCiAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgPGRpdj4NCiAgICAgICAgICAgICAgPHNtYWxsPuS7iuaXpea9ruS9jTwvc21hbGw+DQogICAgICAgICAgICAgIDxzdHJvbmcgaWQ9InByb2dyZXNzQ29weSI+6L+Y5rKh5pyJ5Lu75YqhPC9zdHJvbmc+DQogICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgPGRpdiBjbGFzcz0idG9wYmFyLWFjdGlvbnMiPg0KICAgICAgICAgIDxidXR0b24gY2xhc3M9InF1aWV0LWJ1dHRvbiIgaWQ9InNvdW5kQnV0dG9uIiB0eXBlPSJidXR0b24iIHRpdGxlPSLlvIDlhbPnjq/looPpn7MiPg0KICAgICAgICAgICAgPGkgZGF0YS1sdWNpZGU9InZvbHVtZS0yIj48L2k+DQogICAgICAgICAgICA8c3Bhbj7njq/looPpn7M8L3NwYW4+DQogICAgICAgICAgPC9idXR0b24+DQogICAgICAgICAgPGJ1dHRvbiBjbGFzcz0icXVpZXQtYnV0dG9uIiBpZD0iZm9jdXNCdXR0b24iIHR5cGU9ImJ1dHRvbiIgdGl0bGU9Iui/m+WFpeS4k+azqOaooeW8jyI+DQogICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0ic2NhbiI+PC9pPg0KICAgICAgICAgICAgPHNwYW4+5LiT5rOoPC9zcGFuPg0KICAgICAgICAgIDwvYnV0dG9uPg0KICAgICAgICA8L2Rpdj4NCiAgICAgIDwvaGVhZGVyPg0KDQogICAgICA8bmF2IGNsYXNzPSJ2aWV3LXRhYnMiIGFyaWEtbGFiZWw9IuS4u+WvvOiIqiI+DQogICAgICAgIDxidXR0b24gY2xhc3M9ImlzLWFjdGl2ZSIgdHlwZT0iYnV0dG9uIiBkYXRhLXNjcmVlbj0idG9kYXkiPg0KICAgICAgICAgIDxpIGRhdGEtbHVjaWRlPSJzdW4tbWVkaXVtIj48L2k+DQogICAgICAgICAg5LuK5pel5Lu75YqhDQogICAgICAgIDwvYnV0dG9uPg0KICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgZGF0YS1zY3JlZW49InBsYW5zIj4NCiAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0iY2FsZW5kYXItcmFuZ2UiPjwvaT4NCiAgICAgICAgICDplb/mnJ/orqHliJINCiAgICAgICAgPC9idXR0b24+DQogICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLXNjcmVlbj0iZmFybSI+DQogICAgICAgICAgPGkgZGF0YS1sdWNpZGU9InNwcm91dCI+PC9pPg0KICAgICAgICAgIOa9ruaxkOWGnOWcug0KICAgICAgICA8L2J1dHRvbj4NCiAgICAgIDwvbmF2Pg0KDQogICAgICA8bWFpbiBjbGFzcz0id29ya3NwYWNlIj4NCiAgICAgICAgPHNlY3Rpb24gY2xhc3M9InNjcmVlbi1wYW5lbCB0b2RheS1zY3JlZW4gaXMtYWN0aXZlIiBkYXRhLXNjcmVlbi1wYW5lbD0idG9kYXkiPgogICAgICAgICAgPGRpdiBjbGFzcz0idG9kYXktZ3JpZCI+CiAgICAgICAgICAgIDxzZWN0aW9uIGNsYXNzPSJwYW5lbCB0YXNrLXBhbmVsIiBhcmlhLWxhYmVsbGVkYnk9InRhc2tUaXRsZSI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0icGFuZWwtaGVhZGluZyI+CiAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICA8cCBjbGFzcz0ic2VjdGlvbi1sYWJlbCI+PHNwYW4gY2xhc3M9InNlY3Rpb24taW5kZXgiPjAxPC9zcGFuPiBUT0RBWTwvcD4KICAgICAgICAgICAgICAgICAgPGgyIGlkPSJ0YXNrVGl0bGUiPuS7iuWkqeeahOiIqueoizwvaDI+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0YXNrLWNvdW50IiBpZD0idGFza0NvdW50Ij4wIOmhuTwvc3Bhbj4NCiAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgPGZvcm0gY2xhc3M9InRhc2stY29tcG9zZXIiIGlkPSJ0YXNrRm9ybSI+DQogICAgICAgICAgICAgICAgPGkgZGF0YS1sdWNpZGU9InBsdXMiIGFyaWEtaGlkZGVuPSJ0cnVlIj48L2k+DQogICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzPSJzci1vbmx5IiBmb3I9InRhc2tJbnB1dCI+5re75Yqg5LuK5pel5Lu75YqhPC9sYWJlbD4NCiAgICAgICAgICAgICAgICA8aW5wdXQNCiAgICAgICAgICAgICAgICAgIGlkPSJ0YXNrSW5wdXQiDQogICAgICAgICAgICAgICAgICBuYW1lPSJ0YXNrIg0KICAgICAgICAgICAgICAgICAgdHlwZT0idGV4dCINCiAgICAgICAgICAgICAgICAgIG1heGxlbmd0aD0iODAiDQogICAgICAgICAgICAgICAgICBhdXRvY29tcGxldGU9Im9mZiINCiAgICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPSLmt7vliqDlj6rlsZ7kuo7ku4rlpKnnmoTku7vliqEiDQogICAgICAgICAgICAgICAgLz4NCiAgICAgICAgICAgICAgICA8a2JkPkVudGVyPC9rYmQ+DQogICAgICAgICAgICAgIDwvZm9ybT4NCg0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0YXNrLWxpc3QiIGlkPSJ0YXNrTGlzdCIgYXJpYS1saXZlPSJwb2xpdGUiPjwvZGl2Pg0KDQogICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImVtcHR5LXN0YXRlIiBpZD0iZW1wdHlTdGF0ZSI+DQogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZW1wdHktb3JiaXQiIGFyaWEtaGlkZGVuPSJ0cnVlIj4NCiAgICAgICAgICAgICAgICAgIDxzcGFuPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgIDxzcGFuPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgIDxzcGFuPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICA8aDM+5LuK5aSp6L+Y5piv5LiA54mH6Z2Z5rC0PC9oMz4NCiAgICAgICAgICAgICAgICA8cD7lj6/ku6XlnKjplb/mnJ/orqHliJLkuK3lronmjpLmr4/lpKnnmoTku7vliqHvvIzkuZ/lj6/ku6XlhYjmt7vliqDkuIDpobnkuLTml7bku7vliqHjgII8L3A+DQogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic3VnZ2VzdGlvbi1yb3ciIGlkPSJzdWdnZXN0aW9uUm93Ij4NCiAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLXN1Z2dlc3Rpb249IumYheivuyAzMCDliIbpkp8iPumYheivuyAzMCDliIbpkp88L2J1dHRvbj4NCiAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLXN1Z2dlc3Rpb249IuWujOaIkOS7iuaXpeivvueoiyI+5a6M5oiQ5LuK5pel6K++56iLPC9idXR0b24+DQogICAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgZGF0YS1zdWdnZXN0aW9uPSLmlbTnkIbkuIDpobXnrJTorrAiPuaVtOeQhuS4gOmhteeslOiusDwvYnV0dG9uPg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICA8L2Rpdj4NCg0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0YXNrLWZvb3RlciI+CiAgICAgICAgICAgICAgICA8c3Bhbj48aSBkYXRhLWx1Y2lkZT0ibWVkYWwiPjwvaT4g5q+P5aSpIDAwOjAwIOe7k+eul+WFqOa4he+8jOWPr+mihuWPliAxIOaemuiHqumAieWNsOiusO+8m+acqumAieWNsOiusOWPr+mVv+acn+S/neWtmDwvc3Bhbj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InRhc2stZm9vdGVyLWFjdGlvbnMiPgogICAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgaWQ9InBlcmZlY3RNYXJrQnV0dG9uIiBoaWRkZW4+CiAgICAgICAgICAgICAgICAgICAgPGkgZGF0YS1sdWNpZGU9InN0YW1wIj48L2k+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4gaWQ9InBlcmZlY3RNYXJrQnV0dG9uTGFiZWwiPumAieaLqeWFqOa4heWNsOiusDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBpZD0iY2xlYXJDb21wbGV0ZWQiPuaUtui1t+W3suWujOaIkDwvYnV0dG9uPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvc2VjdGlvbj4NCg0KICAgICAgICAgICAgPGFzaWRlIGNsYXNzPSJ0b2RheS1zaWRlIj4NCiAgICAgICAgICAgICAgPHNlY3Rpb24gY2xhc3M9InBhbmVsIHN0YWdlLXBhbmVsIiBhcmlhLWxhYmVsbGVkYnk9InN0YWdlVGl0bGUiPg0KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InN0YWdlLWhlYWRpbmciPg0KICAgICAgICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICAgICAgICA8cCBjbGFzcz0ic2VjdGlvbi1sYWJlbCI+Q09NUEFOSU9OPC9wPg0KICAgICAgICAgICAgICAgICAgPGgyIGlkPSJzdGFnZVRpdGxlIj7mt7HmsZA8L2gyPg0KICAgICAgICAgICAgICAgICAgPHAgaWQ9InN0YWdlU3VidGl0bGUiPui0n+i0o+S4u+eVjOmdoumZquS8tOOAgeavj+aXpeeKtuaAgeS4juaQgea1heaPkOmGkuOAgjwvcD4NCiAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ2aWV3LXN3aXRjaCIgYXJpYS1sYWJlbD0i6KeS6Imy5bGV56S65pa55byPIj4KICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iaXMtYWN0aXZlIiB0eXBlPSJidXR0b24iIGRhdGEtYXJ0PSJjdXRlIj4KICAgICAgICAgICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0ic3BhcmtsZXMiPjwvaT4KICAgICAgICAgICAgICAgICAgICDlubzmgIEKICAgICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWFydD0icHJldHR5Ij4KICAgICAgICAgICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0ic3BhcmtsZXMiPjwvaT4KICAgICAgICAgICAgICAgICAgICDpsrjmrYwKICAgICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBkYXRhLWFydD0iY29sbGVjdGlvbiI+CiAgICAgICAgICAgICAgICAgICAgPGkgZGF0YS1sdWNpZGU9ImltYWdlIj48L2k+CiAgICAgICAgICAgICAgICAgICAg5YW46JePCiAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGFnZS12aWV3cG9ydCIgaWQ9InN0YWdlVmlld3BvcnQiPg0KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic3RhZ2Utc2NlbmUiIGFyaWEtaGlkZGVuPSJ0cnVlIj48L2Rpdj4NCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InN0YWdlLXNjZW5lLXNoYWRlIiBhcmlhLWhpZGRlbj0idHJ1ZSI+PC9kaXY+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGFnZS1nbG93IiBhcmlhLWhpZGRlbj0idHJ1ZSI+PC9kaXY+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJwb3J0cmFpdC1sYXllciBpcy1hY3RpdmUiIGlkPSJwb3J0cmFpdExheWVyIj4NCiAgICAgICAgICAgICAgICAgICAgPGltZwogICAgICAgICAgICAgICAgICAgICAgaWQ9InBvcnRyYWl0SW1hZ2UiCiAgICAgICAgICAgICAgICAgICAgICBzcmM9ImRhdGE6aW1hZ2UvZ2lmO2Jhc2U2NCxSMGxHT0RsaEFRQUJBQUQvQUN3QUFBQUFBUUFCQUFBQ0FEcz0iCiAgICAgICAgICAgICAgICAgICAgICBhbHQ9Iua3seaxkOeri+e7mCIKICAgICAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InBvcnRyYWl0LXJlZmxlY3Rpb24iIGFyaWEtaGlkZGVuPSJ0cnVlIj48L2Rpdj4KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNoYXJhY3Rlci1wZW5kaW5nIiBpZD0iY2hhcmFjdGVyUGVuZGluZyIgaGlkZGVuPg0KICAgICAgICAgICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0ic2Nhbi1mYWNlIj48L2k+DQogICAgICAgICAgICAgICAgICAgIDxzdHJvbmc+5b2i6LGh5b6F56Gu6K6kPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICAgIDxzcGFuPuWPr+eIseaWueWQkeWumueov+WQjuWGjeaOpeWFpTwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iaGF0Y2gtbWVkYWxzIiBpZD0iaGF0Y2hNZWRhbHMiIGFyaWEtbGFiZWw9Iua9ruiKveW+veiusOeGlOmTuOi/m+W6piI+DQogICAgICAgICAgICAgICAgICAgICAgPHNwYW4+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGFnZS1odWQiPg0KICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ic3RhdHVzLWNoaXAiIGlkPSJzZWxlY3RlZFJvbGUiPuWAvOaXpeiusOW9lTwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InN0YXR1cy1jaGlwIG11dGVkIiBpZD0ic2VsZWN0ZWRTdGF0ZSI+5bey5oq16L6+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJmb2N1cy1kb2NrIiBpZD0iZm9jdXNEb2NrIiBoaWRkZW4+DQogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImZvY3VzLWNvcHkiPg0KICAgICAgICAgICAgICAgICAgICAgIDxzbWFsbD5GT0NVUyBDVVJSRU5UPC9zbWFsbD4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nIGlkPSJmb2N1c1Rhc2tUaXRsZSI+6Ieq55Sx5LiT5rOoPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgICA8dGltZSBpZD0iZm9jdXNUaW1lciIgZGF0ZXRpbWU9IlBUMjVNIj4yNTowMDwvdGltZT4NCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZm9jdXMtYWN0aW9ucyI+DQogICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJmb2N1c0NvbXBsZXRlIiB0aXRsZT0i5a6M5oiQ5b2T5YmN5Lu75YqhIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxpIGRhdGEtbHVjaWRlPSJjaGVjayI+PC9pPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4+5a6M5oiQPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPg0KICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBpZD0iZm9jdXNTa2lwIiB0aXRsZT0i5YiH5o2i5LiL5LiA6aG55b6F5YqeIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxpIGRhdGEtbHVjaWRlPSJmb3J3YXJkIj48L2k+DQogICAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj7ot7Pov4c8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+DQogICAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGFnZS1mb290ZXIiPg0KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29tcGFuaW9uLXRhYnMiIGlkPSJjb21wYW5pb25UYWJzIiBhcmlhLWxhYmVsPSLliIfmjaLkvJnkvLQiPjwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic3RhZ2UtYWN0aW9uIj4NCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic3RhZ2UtYWN0aW9uLWNvcHkiPg0KICAgICAgICAgICAgICAgICAgICAgIDxzbWFsbD7mr4/op6PplIEgMyDkvY3psrjmrYzlvaLmgIHvvIzoo4XluKcgMSDlvKA8L3NtYWxsPgogICAgICAgICAgICAgICAgICAgICAgPHN0cm9uZyBpZD0id2hhbGVUb2tlbkNvdW50Ij4wIC8gMzwvc3Ryb25nPg0KICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJzdGFnZS1hY3Rpb24taGludCIgaWQ9Im1lcmdlSGludCI+CiAgICAgICAgICAgICAgICAgICAgICAgIOWGjeino+mUgSAzIOS9jemyuOatjOW9ouaAgeWNs+WPr+ijheW4pwogICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJwcmltYXJ5LWJ1dHRvbiIgaWQ9Im1lcmdlQnV0dG9uIiB0eXBlPSJidXR0b24iPg0KICAgICAgICAgICAgICAgICAgICAgIDxpIGRhdGEtbHVjaWRlPSJzcGFya2xlcyI+PC9pPg0KICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGlkPSJtZXJnZUJ1dHRvbkxhYmVsIj7mn6XnnIvoo4XluKfov5vluqY8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgIDwvc2VjdGlvbj4NCg0KICAgICAgICAgICAgICA8YXNpZGUgY2xhc3M9InBhbmVsIGNvbGxlY3Rpb24tcGFuZWwiIGFyaWEtbGFiZWxsZWRieT0iY29sbGVjdGlvblRpdGxlIj4NCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJwYW5lbC1oZWFkaW5nIj4NCiAgICAgICAgICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzPSJzZWN0aW9uLWxhYmVsIj5SRVdBUkRTPC9wPg0KICAgICAgICAgICAgICAgICAgICA8aDIgaWQ9ImNvbGxlY3Rpb25UaXRsZSI+5oiQ6ZW/5YW46JePPC9oMj4NCiAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImNvbGxlY3Rpb24tY291bnQiIGlkPSJjb2xsZWN0aW9uQ291bnQiPjEgLyA0PC9zcGFuPg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KDQogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29sbGVjdGlvbi1jYXJvdXNlbCI+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjb2xsZWN0aW9uLXZpZXdwb3J0IiBpZD0iY29sbGVjdGlvblZpZXdwb3J0Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29sbGVjdGlvbi1ncmlkIiBpZD0iY29sbGVjdGlvbkdyaWQiPjwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjb2xsZWN0aW9uLXBhZ2VyIiBhcmlhLWxhYmVsPSLmiJDplb/lhbjol4/nv7vpobUiPg0KICAgICAgICAgICAgICAgICAgICA8YnV0dG9uDQogICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImNvbGxlY3Rpb24tcGFnZS1idXR0b24iDQogICAgICAgICAgICAgICAgICAgICAgaWQ9ImNvbGxlY3Rpb25QcmV2Ig0KICAgICAgICAgICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiINCiAgICAgICAgICAgICAgICAgICAgICBhcmlhLWxhYmVsPSLkuIrkuIDpobUiDQogICAgICAgICAgICAgICAgICAgID4NCiAgICAgICAgICAgICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0iY2hldnJvbi1sZWZ0Ij48L2k+DQogICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPg0KICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iY29sbGVjdGlvblBhZ2UiPjEgLyA1PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICA8YnV0dG9uDQogICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImNvbGxlY3Rpb24tcGFnZS1idXR0b24iDQogICAgICAgICAgICAgICAgICAgICAgaWQ9ImNvbGxlY3Rpb25OZXh0Ig0KICAgICAgICAgICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiINCiAgICAgICAgICAgICAgICAgICAgICBhcmlhLWxhYmVsPSLkuIvkuIDpobUiDQogICAgICAgICAgICAgICAgICAgID4NCiAgICAgICAgICAgICAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0iY2hldnJvbi1yaWdodCI+PC9pPg0KICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj4NCiAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KDQogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0idGlkZS1oaXN0b3J5IiBpZD0idGlkZUhpc3RvcnkiIGFyaWEtbGFiZWw9Iui/keS4g+aXpeWFqOa4heiusOW9lSI+PC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJncm93dGgtYmxvY2siPg0KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZ3Jvd3RoLWhlYWRpbmciPg0KICAgICAgICAgICAgICAgICAgICA8c3Bhbj7lkIjmiJDov5vluqY8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgIDxzdHJvbmcgaWQ9Imdyb3d0aFBlcmNlbnQiPjAlPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImRlcHRoLWdhdWdlIj4NCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZGVwdGgtZmlsbCIgaWQ9ImRlcHRoRmlsbCI+PC9kaXY+DQogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImRlcHRoLW1hcmtzIiBhcmlhLWhpZGRlbj0idHJ1ZSI+DQogICAgICAgICAgICAgICAgICAgICAgPHNwYW4+MDwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj4yNTwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj41MDwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj43NTwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj4xMDA8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgICA8cCBpZD0iZ3Jvd3RoQ29weSI+5a6M5oiQ5LyZ5Ly05Lu75Yqh77yM5pS26ZuG5LiT5bGe5Y2w6K6w5bm26Kej6ZSB5LiJ56eN5b2i5oCB44CCPC9wPgogICAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJhcmNoaXZlLXN0cmlwIj4NCiAgICAgICAgICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICAgICAgICAgIDxzbWFsbD7lhajmuIXml6U8L3NtYWxsPgogICAgICAgICAgICAgICAgICAgIDxzdHJvbmcgaWQ9InBlcmZlY3REYXlzIj4wPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICAgICAgICAgIDxzbWFsbD7ov57nu63lrabkuaA8L3NtYWxsPg0KICAgICAgICAgICAgICAgICAgICA8c3Ryb25nIGlkPSJzdHJlYWtEYXlzIj4wPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICAgIDxkaXY+DQogICAgICAgICAgICAgICAgICAgIDxzbWFsbD7mva7msZDlhbjol4/ljaE8L3NtYWxsPg0KICAgICAgICAgICAgICAgICAgICA8c3Ryb25nIGlkPSJiaWdXaGFsZUNvdW50Ij4wPC9zdHJvbmc+DQogICAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgPC9hc2lkZT4NCiAgICAgICAgICAgIDwvYXNpZGU+DQogICAgICAgICAgPC9kaXY+DQogICAgICAgIDwvc2VjdGlvbj4NCg0KICAgICAgICA8c2VjdGlvbiBjbGFzcz0ic2NyZWVuLXBhbmVsIHBsYW5uZXItc2NyZWVuIiBkYXRhLXNjcmVlbi1wYW5lbD0icGxhbnMiPgogICAgICAgICAgPGRpdiBjbGFzcz0icGxhbm5lci1ncmlkIj4KICAgICAgICAgICAgPHNlY3Rpb24gY2xhc3M9InBhbmVsIHBsYW4tZWRpdG9yLXBhbmVsIiBhcmlhLWxhYmVsbGVkYnk9InBsYW5FZGl0b3JUaXRsZSI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0icGFuZWwtaGVhZGluZyI+CiAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICA8cCBjbGFzcz0ic2VjdGlvbi1sYWJlbCI+PHNwYW4gY2xhc3M9InNlY3Rpb24taW5kZXgiPjAxPC9zcGFuPiBTQ0hFRFVMRTwvcD4KICAgICAgICAgICAgICAgICAgPGgyIGlkPSJwbGFuRWRpdG9yVGl0bGUiPumVv+acn+S7u+WKoeiuvue9rjwvaDI+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxidXR0b24gY2xhc3M9InF1aWV0LWJ1dHRvbiIgaWQ9InBsYW5SZXNldCIgdHlwZT0iYnV0dG9uIj4KICAgICAgICAgICAgICAgICAgPGkgZGF0YS1sdWNpZGU9InBsdXMiPjwvaT4KICAgICAgICAgICAgICAgICAgPHNwYW4+5paw5bu6PC9zcGFuPg0KICAgICAgICAgICAgICAgIDwvYnV0dG9uPg0KICAgICAgICAgICAgICA8L2Rpdj4NCg0KICAgICAgICAgICAgICA8Zm9ybSBjbGFzcz0icGxhbi1mb3JtIiBpZD0icGxhbkZvcm0iPg0KICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzcz0icGxhbi1maWVsZCBwbGFuLWZpZWxkLXdpZGUiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+5Lu75Yqh5ZCN56ewPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuVGl0bGUiIHR5cGU9InRleHQiIG1heGxlbmd0aD0iODAiIHJlcXVpcmVkIHBsYWNlaG9sZGVyPSLkvovlpoLvvJrog4wgNTAg5Liq5Y2V6K+NIiAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+6YeN5aSN5pa55byPPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPHNlbGVjdCBpZD0icGxhblJlcGVhdCI+DQogICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9ImRhaWx5Ij7mr4/lpKk8L29wdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT0id2Vla2RheXMiPuW3peS9nOaXpTwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJ3ZWVrbHkiPuavj+WRqOaMh+WumuaXpeacnzwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSJpbnRlcnZhbCI+5q+PIE4g5aSpPC9vcHRpb24+DQogICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9Im9uY2UiPuWPquaJp+ihjOS4gOasoTwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9zZWxlY3Q+DQogICAgICAgICAgICAgICAgPC9sYWJlbD4NCg0KICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzcz0icGxhbi1maWVsZCIgaWQ9InBsYW5JbnRlcnZhbEZpZWxkIiBoaWRkZW4+DQogICAgICAgICAgICAgICAgICA8c3Bhbj7pl7TpmpTlpKnmlbA8L3NwYW4+DQogICAgICAgICAgICAgICAgICA8aW5wdXQgaWQ9InBsYW5JbnRlcnZhbCIgdHlwZT0ibnVtYmVyIiBtaW49IjEiIG1heD0iNjAiIHZhbHVlPSIyIiAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+5byA5aeL5pel5pyfPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuU3RhcnREYXRlIiB0eXBlPSJkYXRlIiByZXF1aXJlZCAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+57uT5p2f5pel5pyfPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuRW5kRGF0ZSIgdHlwZT0iZGF0ZSIgLz4NCiAgICAgICAgICAgICAgICA8L2xhYmVsPg0KDQogICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzPSJwbGFuLWZpZWxkIj4NCiAgICAgICAgICAgICAgICAgIDxzcGFuPuW8gOWni+aXtumXtDwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgIDxpbnB1dCBpZD0icGxhblN0YXJ0VGltZSIgdHlwZT0idGltZSIgdmFsdWU9IjE5OjAwIiAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+57uT5p2f5pe26Ze0PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuRW5kVGltZSIgdHlwZT0idGltZSIgdmFsdWU9IjE5OjMwIiAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+6aKE6K6h5pe26ZW/77yI5YiG6ZKf77yJPC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuRXN0aW1hdGUiIHR5cGU9Im51bWJlciIgbWluPSI1IiBtYXg9IjQ4MCIgdmFsdWU9IjMwIiAvPg0KICAgICAgICAgICAgICAgIDwvbGFiZWw+DQoNCiAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3M9InBsYW4tZmllbGQiPg0KICAgICAgICAgICAgICAgICAgPHNwYW4+5oiq5q2i5pe26Ze0PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgPGlucHV0IGlkPSJwbGFuRGVhZGxpbmUiIHR5cGU9InRpbWUiIC8+DQogICAgICAgICAgICAgICAgPC9sYWJlbD4NCg0KICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzcz0icGxhbi1maWVsZCI+DQogICAgICAgICAgICAgICAgICA8c3Bhbj7liIbnsbs8L3NwYW4+DQogICAgICAgICAgICAgICAgICA8c2VsZWN0IGlkPSJwbGFuQ2F0ZWdvcnkiPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSLlrabkuaAiPuWtpuS5oDwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSLpmIXor7siPumYheivuzwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSLlpI3kuaAiPuWkjeS5oDwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSLov5DliqgiPui/kOWKqDwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPSLlhbbku5YiPuWFtuS7ljwvb3B0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9zZWxlY3Q+DQogICAgICAgICAgICAgICAgPC9sYWJlbD4NCg0KICAgICAgICAgICAgICAgIDxmaWVsZHNldCBjbGFzcz0id2Vla2RheS1maWVsZCBwbGFuLWZpZWxkLXdpZGUiIGlkPSJwbGFuV2Vla2RheUZpZWxkIiBoaWRkZW4+DQogICAgICAgICAgICAgICAgICA8bGVnZW5kPuavj+WRqOaJp+ihjOaXpeacnzwvbGVnZW5kPg0KICAgICAgICAgICAgICAgICAgPGxhYmVsPjxpbnB1dCB0eXBlPSJjaGVja2JveCIgdmFsdWU9IjEiIC8+IOS4gDwvbGFiZWw+DQogICAgICAgICAgICAgICAgICA8bGFiZWw+PGlucHV0IHR5cGU9ImNoZWNrYm94IiB2YWx1ZT0iMiIgLz4g5LqMPC9sYWJlbD4NCiAgICAgICAgICAgICAgICAgIDxsYWJlbD48aW5wdXQgdHlwZT0iY2hlY2tib3giIHZhbHVlPSIzIiAvPiDkuIk8L2xhYmVsPg0KICAgICAgICAgICAgICAgICAgPGxhYmVsPjxpbnB1dCB0eXBlPSJjaGVja2JveCIgdmFsdWU9IjQiIC8+IOWbmzwvbGFiZWw+DQogICAgICAgICAgICAgICAgICA8bGFiZWw+PGlucHV0IHR5cGU9ImNoZWNrYm94IiB2YWx1ZT0iNSIgLz4g5LqUPC9sYWJlbD4NCiAgICAgICAgICAgICAgICAgIDxsYWJlbD48aW5wdXQgdHlwZT0iY2hlY2tib3giIHZhbHVlPSI2IiAvPiDlha08L2xhYmVsPg0KICAgICAgICAgICAgICAgICAgPGxhYmVsPjxpbnB1dCB0eXBlPSJjaGVja2JveCIgdmFsdWU9IjAiIC8+IOaXpTwvbGFiZWw+DQogICAgICAgICAgICAgICAgPC9maWVsZHNldD4NCg0KICAgICAgICAgICAgICAgIDxidXR0b24gY2xhc3M9InByaW1hcnktYnV0dG9uIHBsYW4tc3VibWl0IiBpZD0icGxhblN1Ym1pdCIgdHlwZT0ic3VibWl0Ij4NCiAgICAgICAgICAgICAgICAgIDxpIGRhdGEtbHVjaWRlPSJjYWxlbmRhci1wbHVzIj48L2k+DQogICAgICAgICAgICAgICAgICDmt7vliqDplb/mnJ/ku7vliqENCiAgICAgICAgICAgICAgICA8L2J1dHRvbj4NCiAgICAgICAgICAgICAgPC9mb3JtPg0KICAgICAgICAgICAgPC9zZWN0aW9uPg0KDQogICAgICAgICAgICA8c2VjdGlvbiBjbGFzcz0icGFuZWwgcGxhbi1vdmVydmlldy1wYW5lbCIgYXJpYS1sYWJlbGxlZGJ5PSJwbGFuT3ZlcnZpZXdUaXRsZSI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0icGFuZWwtaGVhZGluZyI+CiAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICA8cCBjbGFzcz0ic2VjdGlvbi1sYWJlbCI+PHNwYW4gY2xhc3M9InNlY3Rpb24taW5kZXgiPjAyPC9zcGFuPiBTRVZFTiBUSURFUzwvcD4KICAgICAgICAgICAgICAgICAgPGgyIGlkPSJwbGFuT3ZlcnZpZXdUaXRsZSI+6K6h5YiS5LiO5pyq5p2l5LiD5aSpPC9oMj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRhc2stY291bnQiIGlkPSJwbGFuQ291bnQiPjAg6aG5PC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ3ZWVrLXByZXZpZXciPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0id2Vlay1wcmV2aWV3LWhlYWRpbmciPgogICAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICAgIDxoMz7mnKrmnaXkuIPlpKk8L2gzPgogICAgICAgICAgICAgICAgICAgIDxzcGFuPuiuoeWIkueUn+aIkOmihOiniDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9IndlZWstcHJldmlldy1rZXkiIGFyaWEtaGlkZGVuPSJ0cnVlIj4KICAgICAgICAgICAgICAgICAgICA8aT48L2k+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4+5LuK5pel5r2u5L2NPC9zcGFuPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0id2Vlay1ncmlkIiBpZD0id2Vla0dyaWQiPjwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgoNCiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0icGxhbi1saXN0LWhlYWRpbmciPg0KICAgICAgICAgICAgICAgIDxoMz7plb/mnJ/ku7vliqE8L2gzPg0KICAgICAgICAgICAgICAgIDxzcGFuPueCueWHu+WNoeeJh+WPr+e8lui+ke+8jOaaguWBnOWQjuS4jeWGjeeUn+aIkDwvc3Bhbj4NCiAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgIDxkaXYgY2xhc3M9InBsYW4tbGlzdCIgaWQ9InBsYW5MaXN0Ij48L2Rpdj4NCiAgICAgICAgICAgIDwvc2VjdGlvbj4NCiAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgPC9zZWN0aW9uPg0KDQogICAgICAgIDxzZWN0aW9uIGNsYXNzPSJzY3JlZW4tcGFuZWwiIGRhdGEtc2NyZWVuLXBhbmVsPSJmYXJtIj4NCiAgICAgICAgICA8ZGl2IGNsYXNzPSJmYXJtLXJvb3QiIGlkPSJmYXJtUm9vdCI+PC9kaXY+DQogICAgICAgIDwvc2VjdGlvbj4NCiAgICAgIDwvbWFpbj4NCg0KICAgICAgPGZvb3RlciBjbGFzcz0ic3RhdHVzYmFyIj4NCiAgICAgICAgPGRpdiBjbGFzcz0ic3RhdHVzLWl0ZW0iPg0KICAgICAgICAgIDxzcGFuIGNsYXNzPSJzdGF0dXMtYmVhY29uIiBpZD0ic3RhdHVzQmVhY29uIj48L3NwYW4+DQogICAgICAgICAgPHNwYW4gaWQ9InN0YXR1c0NvcHkiPuetieW+heS7iuWkqeeahOesrOS4gOmhueS7u+WKoTwvc3Bhbj4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIDxkaXYgY2xhc3M9InNob3J0Y3V0LXN0cmlwIj4NCiAgICAgICAgICA8c3Bhbj48a2JkPk48L2tiZD4g5paw5Lu75YqhPC9zcGFuPg0KICAgICAgICAgIDxzcGFuPjxrYmQ+Rjwva2JkPiDkuJPms6g8L3NwYW4+DQogICAgICAgICAgPHNwYW4+PGtiZD4xLTQ8L2tiZD4g5YiH5o2i5LyZ5Ly0PC9zcGFuPg0KICAgICAgICA8L2Rpdj4NCiAgICAgIDwvZm9vdGVyPg0KICAgIDwvZGl2Pg0KDQogICAgPGRpdiBjbGFzcz0idG9hc3QtcmVnaW9uIiBpZD0idG9hc3RSZWdpb24iIGFyaWEtbGl2ZT0iYXNzZXJ0aXZlIj48L2Rpdj4NCg0KICAgIDxkaXYgY2xhc3M9Im1lcmdlLW92ZXJsYXkiIGlkPSJtZXJnZU92ZXJsYXkiIGFyaWEtaGlkZGVuPSJ0cnVlIj4KICAgICAgPGRpdiBjbGFzcz0ibWVyZ2Utc2NlbmUiPg0KICAgICAgICA8YnV0dG9uIGNsYXNzPSJtZXJnZS1jbG9zZSIgaWQ9Im1lcmdlQ2xvc2UiIHR5cGU9ImJ1dHRvbiIgYXJpYS1sYWJlbD0i5YWz6Zet5YWx6bij5ryU5Ye6Ij4NCiAgICAgICAgICA8aSBkYXRhLWx1Y2lkZT0ieCI+PC9pPg0KICAgICAgICA8L2J1dHRvbj4NCiAgICAgICAgPGRpdiBjbGFzcz0ibWVyZ2UtcmluZ3MiIGFyaWEtaGlkZGVuPSJ0cnVlIj4NCiAgICAgICAgICA8c3Bhbj48L3NwYW4+DQogICAgICAgICAgPHNwYW4+PC9zcGFuPg0KICAgICAgICAgIDxzcGFuPjwvc3Bhbj4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIDxkaXYgY2xhc3M9InJlc29uYW5jZS10cmlvIiBpZD0ibWVyZ2VUcmlvIiBhcmlhLWxhYmVsPSLkuInkvY3ni6znq4vpsrjngbXlkIzml7bliLDluK0iPgogICAgICAgICAgPGZpZ3VyZT4KICAgICAgICAgICAgPHBpY3R1cmU+CiAgICAgICAgICAgICAgPHNvdXJjZQogICAgICAgICAgICAgICAgbWVkaWE9IihtYXgtd2lkdGg6IDgyMHB4KSwgKHBvaW50ZXI6IGNvYXJzZSkiCiAgICAgICAgICAgICAgICBzcmNzZXQ9Imh0dHBzOi8vZmFzdGx5LmpzZGVsaXZyLm5ldC9naC9yMjE3NzYzMi1kZXNpZ24vdGlkYWwtc3R1ZHktcm9vbUBtYWluL2Fzc2V0cy9tb2JpbGUvY2hhcmFjdGVycy9jb2xsZWN0aW9uL2RlZXAtY3VycmVudC1jb2xsZWN0aW9uLWZpbmFsLXYxLndlYnAiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICA8aW1nCiAgICAgICAgICAgICAgICBzcmM9Ii4vYXNzZXRzL2NoYXJhY3RlcnMvY29sbGVjdGlvbi9maW5hbC9kZWVwLWN1cnJlbnQtY29sbGVjdGlvbi1maW5hbC12MS5wbmciCiAgICAgICAgICAgICAgICBhbHQ9Iua3seaxkOWFqOi6q+eri+e7mCIKICAgICAgICAgICAgICAgIGxvYWRpbmc9ImxhenkiCiAgICAgICAgICAgICAgICBkZWNvZGluZz0iYXN5bmMiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9waWN0dXJlPgogICAgICAgICAgICA8ZmlnY2FwdGlvbj7mt7HmsZAgwrcg5YC85pelPC9maWdjYXB0aW9uPgogICAgICAgICAgPC9maWd1cmU+CiAgICAgICAgICA8ZmlndXJlPgogICAgICAgICAgICA8cGljdHVyZT4KICAgICAgICAgICAgICA8c291cmNlCiAgICAgICAgICAgICAgICBtZWRpYT0iKG1heC13aWR0aDogODIwcHgpLCAocG9pbnRlcjogY29hcnNlKSIKICAgICAgICAgICAgICAgIHNyY3NldD0iaHR0cHM6Ly9mYXN0bHkuanNkZWxpdnIubmV0L2doL3IyMTc3NjMyLWRlc2lnbi90aWRhbC1zdHVkeS1yb29tQG1haW4vYXNzZXRzL21vYmlsZS9jaGFyYWN0ZXJzL2NvbGxlY3Rpb24vZnJvc3Qtc2NhbGUtY29sbGVjdGlvbi1maW5hbC12MS53ZWJwIgogICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgPGltZwogICAgICAgICAgICAgICAgc3JjPSIuL2Fzc2V0cy9jaGFyYWN0ZXJzL2NvbGxlY3Rpb24vZmluYWwvZnJvc3Qtc2NhbGUtY29sbGVjdGlvbi1maW5hbC12MS5wbmciCiAgICAgICAgICAgICAgICBhbHQ9IumcnOmznuWFqOi6q+eri+e7mCIKICAgICAgICAgICAgICAgIGxvYWRpbmc9ImxhenkiCiAgICAgICAgICAgICAgICBkZWNvZGluZz0iYXN5bmMiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9waWN0dXJlPgogICAgICAgICAgICA8ZmlnY2FwdGlvbj7pnJzps54gwrcg5a6I5bqPPC9maWdjYXB0aW9uPgogICAgICAgICAgPC9maWd1cmU+CiAgICAgICAgICA8ZmlndXJlPgogICAgICAgICAgICA8cGljdHVyZT4KICAgICAgICAgICAgICA8c291cmNlCiAgICAgICAgICAgICAgICBtZWRpYT0iKG1heC13aWR0aDogODIwcHgpLCAocG9pbnRlcjogY29hcnNlKSIKICAgICAgICAgICAgICAgIHNyY3NldD0iaHR0cHM6Ly9mYXN0bHkuanNkZWxpdnIubmV0L2doL3IyMTc3NjMyLWRlc2lnbi90aWRhbC1zdHVkeS1yb29tQG1haW4vYXNzZXRzL21vYmlsZS9jaGFyYWN0ZXJzL2NvbGxlY3Rpb24vc2NhcmxldC1wYWdlLWNvbGxlY3Rpb24tZmluYWwtdjEud2VicCIKICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIDxpbWcKICAgICAgICAgICAgICAgIHNyYz0iLi9hc3NldHMvY2hhcmFjdGVycy9jb2xsZWN0aW9uL2ZpbmFsL3NjYXJsZXQtcGFnZS1jb2xsZWN0aW9uLWZpbmFsLXYxLnBuZyIKICAgICAgICAgICAgICAgIGFsdD0i57uv6aG15YWo6Lqr56uL57uYIgogICAgICAgICAgICAgICAgbG9hZGluZz0ibGF6eSIKICAgICAgICAgICAgICAgIGRlY29kaW5nPSJhc3luYyIKICAgICAgICAgICAgICAvPgogICAgICAgICAgICA8L3BpY3R1cmU+CiAgICAgICAgICAgIDxmaWdjYXB0aW9uPue7r+mhtSDCtyDnvJbnm648L2ZpZ2NhcHRpb24+CiAgICAgICAgICA8L2ZpZ3VyZT4KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPHAgY2xhc3M9Im1lcmdlLWtpY2tlciI+VElEQUwgQ0FSRCBGUkFNRUQ8L3A+DQogICAgICAgIDxoMiBpZD0ibWVyZ2VUaXRsZSI+5r2u5rGQ5YW46JeP5Y2h5a6M5oiQ6KOF5binPC9oMj4NCiAgICAgICAgPHAgaWQ9Im1lcmdlRGVzY3JpcHRpb24iPgogICAgICAgICAg5q+P6Kej6ZSBIDMg5L2N5LyZ5Ly055qE6bK45q2M5b2i5oCB77yM5bCx6IO95oqK5pys57uE55qE5ZCM6KGM5Y2w6K6w6KOF5bin5oiQIDEg5byg5r2u5rGQ5YW46JeP5Y2h44CCCiAgICAgICAgPC9wPgogICAgICAgIDxidXR0b24gY2xhc3M9InByaW1hcnktYnV0dG9uIG1lcmdlLWNvbmZpcm0iIGlkPSJtZXJnZUNvbmZpcm0iIHR5cGU9ImJ1dHRvbiI+DQogICAgICAgICAg6KOF5bin5bm25pS26L+b5YW46JeP6aaGDQogICAgICAgIDwvYnV0dG9uPg0KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJtYXJrLWNob2ljZS1vdmVybGF5IiBpZD0ibWFya0Nob2ljZU92ZXJsYXkiIGFyaWEtaGlkZGVuPSJ0cnVlIj4KICAgICAgPHNlY3Rpb24gY2xhc3M9Im1hcmstY2hvaWNlLXNjZW5lIiByb2xlPSJkaWFsb2ciIGFyaWEtbW9kYWw9InRydWUiIGFyaWEtbGFiZWxsZWRieT0ibWFya0Nob2ljZVRpdGxlIj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJtYXJrLWNob2ljZS1jbG9zZSIgaWQ9Im1hcmtDaG9pY2VDbG9zZSIgdHlwZT0iYnV0dG9uIiBhcmlhLWxhYmVsPSLnqI3lkI7pgInmi6kiPgogICAgICAgICAgPGkgZGF0YS1sdWNpZGU9IngiPjwvaT4KICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8cCBjbGFzcz0ibWFyay1jaG9pY2Uta2lja2VyIj5QRVJGRUNUIFRJREUgU0VBTDwvcD4KICAgICAgICA8aDIgaWQ9Im1hcmtDaG9pY2VUaXRsZSI+6YCJ5oup5YWo5riF55qE5LiT5bGe5Y2w6K6wPC9oMj4KICAgICAgICA8cCBjbGFzcz0ibWFyay1jaG9pY2UtY29weSIgaWQ9Im1hcmtDaG9pY2VDb3B5Ij4KICAgICAgICAgIOW3sue7k+eul+eahOWFqOa4heaXpeS8muWtmOWFpeW+hemAieWMuu+8jOacqumihuWPluS4jeS8mui/h+acn+OAguaMkemAieS4gOS9jeS8meS8tO+8jOiuqeWlueeahOWuoOeJqeWNsOiusOiQveWcqOaUtuiXj+WGjOS4reOAggogICAgICAgIDwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJtYXJrLWNob2ljZS1ncmlkIiBpZD0ibWFya0Nob2ljZUdyaWQiPjwvZGl2PgogICAgICAgIDxwIGNsYXNzPSJtYXJrLWNob2ljZS1ub3RlIiBpZD0ibWFya0Nob2ljZU5vdGUiPuavj+asoemihuWPlua2iOiAlyAxIOaemuW3suWtmOWFqOa4heWNsOiusO+8m+WJqeS9meWNsOiusOWPr+S7peS7peWQjue7p+e7remAieaLqeOAgjwvcD4KICAgICAgPC9zZWN0aW9uPgogICAgPC9kaXY+CgogICAgPHNjcmlwdCBzcmM9Ii4vYXNzZXRzL2NoYXJhY3RlcnMvaWRsZS9pZGxlLWZyYW1lcy5qcz92PTIwMjYxMDAzMjIzMDAwIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSIuL2NoYXJhY3Rlci1yb3N0ZXIuanM/dj0yMDI2MTAwMzIyMzAwMCI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iLi9jaGFyYWN0ZXItbWFya3MuanM/dj0yMDI2MTAwMzIyMzAwMCI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iLi9mYXJtLWdhbWUuanM/dj0yMDI2MTAwMzIyMzAwMCI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iLi9mYXJtLWFydC5qcz92PTIwMjYxMDAzMjIzMDAwIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSIuL2FwcC5qcz92PTIwMjYxMDAzMjIzMDAwIj48L3NjcmlwdD4KICA8L2JvZHk+DQo8L2h0bWw+DQo=
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="个人学习监督与鲸鱼娘收藏工作台"
+    />
+    <meta name="theme-color" content="#061b21" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="潮汐书斋" />
+    <title>潮汐书斋</title>
+    <link rel="icon" href="./assets/launcher/tidal-study.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./assets/launcher/tidal-study-180.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css?v=20261003223000" />
+    <link rel="stylesheet" href="./farm.css?v=20261003223000" />
+    <script src="./vendor/lucide.js"></script>
+  </head>
+  <body>
+    <div class="ocean-noise" aria-hidden="true"></div>
+    <aside class="ios-install-tip" id="iosInstallTip" hidden>
+      <i data-lucide="share"></i>
+      <span>在 Safari 点“分享”，再选“添加到主屏幕”</span>
+      <button type="button" id="iosInstallDismiss" aria-label="关闭安装提示">
+        <i data-lucide="x"></i>
+      </button>
+    </aside>
+    <div class="app-shell" id="app">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="brand-kicker">TIDAL STUDY ROOM</p>
+            <h1>潮汐书斋</h1>
+          </div>
+        </div>
+
+        <div class="topbar-center">
+          <div class="date-block">
+            <span id="weekdayLabel">星期三</span>
+            <strong id="dateLabel">09月30日</strong>
+          </div>
+          <div class="day-progress" aria-label="今日任务进度">
+            <div class="progress-ring" id="progressRing">
+              <span id="progressValue">0%</span>
+            </div>
+            <div>
+              <small>今日潮位</small>
+              <strong id="progressCopy">还没有任务</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="quiet-button" id="soundButton" type="button" title="开关环境音">
+            <i data-lucide="volume-2"></i>
+            <span>环境音</span>
+          </button>
+          <button class="quiet-button" id="focusButton" type="button" title="进入专注模式">
+            <i data-lucide="scan"></i>
+            <span>专注</span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="view-tabs" aria-label="主导航">
+        <button class="is-active" type="button" data-screen="today">
+          <i data-lucide="sun-medium"></i>
+          今日任务
+        </button>
+        <button type="button" data-screen="plans">
+          <i data-lucide="calendar-range"></i>
+          长期计划
+        </button>
+        <button type="button" data-screen="farm">
+          <i data-lucide="sprout"></i>
+          潮汐农场
+        </button>
+      </nav>
+
+      <main class="workspace">
+        <section class="screen-panel today-screen is-active" data-screen-panel="today">
+          <div class="today-grid">
+            <section class="panel task-panel" aria-labelledby="taskTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">01</span> TODAY</p>
+                  <h2 id="taskTitle">今天的航程</h2>
+                </div>
+                <span class="task-count" id="taskCount">0 项</span>
+              </div>
+
+              <form class="task-composer" id="taskForm">
+                <i data-lucide="plus" aria-hidden="true"></i>
+                <label class="sr-only" for="taskInput">添加今日任务</label>
+                <input
+                  id="taskInput"
+                  name="task"
+                  type="text"
+                  maxlength="80"
+                  autocomplete="off"
+                  placeholder="添加只属于今天的任务"
+                />
+                <kbd>Enter</kbd>
+              </form>
+
+              <div class="task-list" id="taskList" aria-live="polite"></div>
+
+              <div class="empty-state" id="emptyState">
+                <div class="empty-orbit" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <h3>今天还是一片静水</h3>
+                <p>可以在长期计划中安排每天的任务，也可以先添加一项临时任务。</p>
+                <div class="suggestion-row" id="suggestionRow">
+                  <button type="button" data-suggestion="阅读 30 分钟">阅读 30 分钟</button>
+                  <button type="button" data-suggestion="完成今日课程">完成今日课程</button>
+                  <button type="button" data-suggestion="整理一页笔记">整理一页笔记</button>
+                </div>
+              </div>
+
+              <div class="task-footer">
+                <span><i data-lucide="medal"></i> 每天 00:00 结算全清，可领取 1 枚自选印记；未选印记可长期保存</span>
+                <div class="task-footer-actions">
+                  <button type="button" id="perfectMarkButton" hidden>
+                    <i data-lucide="stamp"></i>
+                    <span id="perfectMarkButtonLabel">选择全清印记</span>
+                  </button>
+                  <button type="button" id="clearCompleted">收起已完成</button>
+                </div>
+              </div>
+            </section>
+
+            <aside class="today-side">
+              <section class="panel stage-panel" aria-labelledby="stageTitle">
+                <div class="stage-heading">
+                <div>
+                  <p class="section-label">COMPANION</p>
+                  <h2 id="stageTitle">深汐</h2>
+                  <p id="stageSubtitle">负责主界面陪伴、每日状态与搁浅提醒。</p>
+                </div>
+                <div class="view-switch" aria-label="角色展示方式">
+                  <button class="is-active" type="button" data-art="cute">
+                    <i data-lucide="sparkles"></i>
+                    幼态
+                  </button>
+                  <button type="button" data-art="pretty">
+                    <i data-lucide="sparkles"></i>
+                    鲸歌
+                  </button>
+                  <button type="button" data-art="collection">
+                    <i data-lucide="image"></i>
+                    典藏
+                  </button>
+                </div>
+              </div>
+
+                <div class="stage-viewport" id="stageViewport">
+                  <div class="stage-scene" aria-hidden="true"></div>
+                  <div class="stage-scene-shade" aria-hidden="true"></div>
+                  <div class="stage-glow" aria-hidden="true"></div>
+                  <div class="portrait-layer is-active" id="portraitLayer">
+                    <img
+                      id="portraitImage"
+                      src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                      alt="深汐立绘"
+                    />
+                    <div class="portrait-reflection" aria-hidden="true"></div>
+                  </div>
+                  <div class="character-pending" id="characterPending" hidden>
+                    <i data-lucide="scan-face"></i>
+                    <strong>形象待确认</strong>
+                    <span>可爱方向定稿后再接入</span>
+                    <div class="hatch-medals" id="hatchMedals" aria-label="潮芽徽记熔铸进度">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="stage-hud">
+                    <span class="status-chip" id="selectedRole">值日记录</span>
+                    <span class="status-chip muted" id="selectedState">已抵达</span>
+                  </div>
+                  <div class="focus-dock" id="focusDock" hidden>
+                    <div class="focus-copy">
+                      <small>FOCUS CURRENT</small>
+                      <strong id="focusTaskTitle">自由专注</strong>
+                    </div>
+                    <time id="focusTimer" datetime="PT25M">25:00</time>
+                    <div class="focus-actions">
+                      <button type="button" id="focusComplete" title="完成当前任务">
+                        <i data-lucide="check"></i>
+                        <span>完成</span>
+                      </button>
+                      <button type="button" id="focusSkip" title="切换下一项待办">
+                        <i data-lucide="forward"></i>
+                        <span>跳过</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-footer">
+                  <div class="companion-tabs" id="companionTabs" aria-label="切换伙伴"></div>
+                  <div class="stage-action">
+                    <div class="stage-action-copy">
+                      <small>每解锁 3 位鲸歌形态，装帧 1 张</small>
+                      <strong id="whaleTokenCount">0 / 3</strong>
+                      <span class="stage-action-hint" id="mergeHint">
+                        再解锁 3 位鲸歌形态即可装帧
+                      </span>
+                    </div>
+                    <button class="primary-button" id="mergeButton" type="button">
+                      <i data-lucide="sparkles"></i>
+                      <span id="mergeButtonLabel">查看装帧进度</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <aside class="panel collection-panel" aria-labelledby="collectionTitle">
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-label">REWARDS</p>
+                    <h2 id="collectionTitle">成长典藏</h2>
+                  </div>
+                  <span class="collection-count" id="collectionCount">1 / 4</span>
+                </div>
+
+                <div class="collection-carousel">
+                  <div class="collection-viewport" id="collectionViewport">
+                    <div class="collection-grid" id="collectionGrid"></div>
+                  </div>
+                  <div class="collection-pager" aria-label="成长典藏翻页">
+                    <button
+                      class="collection-page-button"
+                      id="collectionPrev"
+                      type="button"
+                      aria-label="上一页"
+                    >
+                      <i data-lucide="chevron-left"></i>
+                    </button>
+                    <span id="collectionPage">1 / 5</span>
+                    <button
+                      class="collection-page-button"
+                      id="collectionNext"
+                      type="button"
+                      aria-label="下一页"
+                    >
+                      <i data-lucide="chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="tide-history" id="tideHistory" aria-label="近七日全清记录"></div>
+
+                <div class="growth-block">
+                  <div class="growth-heading">
+                    <span>合成进度</span>
+                    <strong id="growthPercent">0%</strong>
+                  </div>
+                  <div class="depth-gauge">
+                    <div class="depth-fill" id="depthFill"></div>
+                    <div class="depth-marks" aria-hidden="true">
+                      <span>0</span>
+                      <span>25</span>
+                      <span>50</span>
+                      <span>75</span>
+                      <span>100</span>
+                    </div>
+                  </div>
+                  <p id="growthCopy">完成伙伴任务，收集专属印记并解锁三种形态。</p>
+                </div>
+
+                <div class="archive-strip">
+                  <div>
+                    <small>全清日</small>
+                    <strong id="perfectDays">0</strong>
+                  </div>
+                  <div>
+                    <small>连续学习</small>
+                    <strong id="streakDays">0</strong>
+                  </div>
+                  <div>
+                    <small>潮汐典藏卡</small>
+                    <strong id="bigWhaleCount">0</strong>
+                  </div>
+                </div>
+              </aside>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen-panel planner-screen" data-screen-panel="plans">
+          <div class="planner-grid">
+            <section class="panel plan-editor-panel" aria-labelledby="planEditorTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">01</span> SCHEDULE</p>
+                  <h2 id="planEditorTitle">长期任务设置</h2>
+                </div>
+                <button class="quiet-button" id="planReset" type="button">
+                  <i data-lucide="plus"></i>
+                  <span>新建</span>
+                </button>
+              </div>
+
+              <form class="plan-form" id="planForm">
+                <label class="plan-field plan-field-wide">
+                  <span>任务名称</span>
+                  <input id="planTitle" type="text" maxlength="80" required placeholder="例如：背 50 个单词" />
+                </label>
+
+                <label class="plan-field">
+                  <span>重复方式</span>
+                  <select id="planRepeat">
+                    <option value="daily">每天</option>
+                    <option value="weekdays">工作日</option>
+                    <option value="weekly">每周指定日期</option>
+                    <option value="interval">每 N 天</option>
+                    <option value="once">只执行一次</option>
+                  </select>
+                </label>
+
+                <label class="plan-field" id="planIntervalField" hidden>
+                  <span>间隔天数</span>
+                  <input id="planInterval" type="number" min="1" max="60" value="2" />
+                </label>
+
+                <label class="plan-field">
+                  <span>开始日期</span>
+                  <input id="planStartDate" type="date" required />
+                </label>
+
+                <label class="plan-field">
+                  <span>结束日期</span>
+                  <input id="planEndDate" type="date" />
+                </label>
+
+                <label class="plan-field">
+                  <span>开始时间</span>
+                  <input id="planStartTime" type="time" value="19:00" />
+                </label>
+
+                <label class="plan-field">
+                  <span>结束时间</span>
+                  <input id="planEndTime" type="time" value="19:30" />
+                </label>
+
+                <label class="plan-field">
+                  <span>预计时长（分钟）</span>
+                  <input id="planEstimate" type="number" min="5" max="480" value="30" />
+                </label>
+
+                <label class="plan-field">
+                  <span>截止时间</span>
+                  <input id="planDeadline" type="time" />
+                </label>
+
+                <label class="plan-field">
+                  <span>分类</span>
+                  <select id="planCategory">
+                    <option value="学习">学习</option>
+                    <option value="阅读">阅读</option>
+                    <option value="复习">复习</option>
+                    <option value="运动">运动</option>
+                    <option value="其他">其他</option>
+                  </select>
+                </label>
+
+                <fieldset class="weekday-field plan-field-wide" id="planWeekdayField" hidden>
+                  <legend>每周执行日期</legend>
+                  <label><input type="checkbox" value="1" /> 一</label>
+                  <label><input type="checkbox" value="2" /> 二</label>
+                  <label><input type="checkbox" value="3" /> 三</label>
+                  <label><input type="checkbox" value="4" /> 四</label>
+                  <label><input type="checkbox" value="5" /> 五</label>
+                  <label><input type="checkbox" value="6" /> 六</label>
+                  <label><input type="checkbox" value="0" /> 日</label>
+                </fieldset>
+
+                <button class="primary-button plan-submit" id="planSubmit" type="submit">
+                  <i data-lucide="calendar-plus"></i>
+                  添加长期任务
+                </button>
+              </form>
+            </section>
+
+            <section class="panel plan-overview-panel" aria-labelledby="planOverviewTitle">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-label"><span class="section-index">02</span> SEVEN TIDES</p>
+                  <h2 id="planOverviewTitle">计划与未来七天</h2>
+                </div>
+                <span class="task-count" id="planCount">0 项</span>
+              </div>
+
+              <div class="week-preview">
+                <div class="week-preview-heading">
+                  <div>
+                    <h3>未来七天</h3>
+                    <span>计划生成预览</span>
+                  </div>
+                  <div class="week-preview-key" aria-hidden="true">
+                    <i></i>
+                    <span>今日潮位</span>
+                  </div>
+                </div>
+                <div class="week-grid" id="weekGrid"></div>
+              </div>
+
+              <div class="plan-list-heading">
+                <h3>长期任务</h3>
+                <span>点击卡片可编辑，暂停后不再生成</span>
+              </div>
+              <div class="plan-list" id="planList"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen-panel" data-screen-panel="farm">
+          <div class="farm-root" id="farmRoot"></div>
+        </section>
+      </main>
+
+      <footer class="statusbar">
+        <div class="status-item">
+          <span class="status-beacon" id="statusBeacon"></span>
+          <span id="statusCopy">等待今天的第一项任务</span>
+        </div>
+        <div class="shortcut-strip">
+          <span><kbd>N</kbd> 新任务</span>
+          <span><kbd>F</kbd> 专注</span>
+          <span><kbd>1-4</kbd> 切换伙伴</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-region" id="toastRegion" aria-live="assertive"></div>
+
+    <div class="merge-overlay" id="mergeOverlay" aria-hidden="true">
+      <div class="merge-scene">
+        <button class="merge-close" id="mergeClose" type="button" aria-label="关闭共鸣演出">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="merge-rings" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="resonance-trio" id="mergeTrio" aria-label="三位独立鲸灵同时到席">
+          <figure>
+            <picture>
+              <source
+                media="(max-width: 820px), (pointer: coarse)"
+                srcset="https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile/characters/collection/deep-current-collection-final-v1.webp"
+              />
+              <img
+                src="./assets/characters/collection/final/deep-current-collection-final-v1.png"
+                alt="深汐全身立绘"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>深汐 · 值日</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source
+                media="(max-width: 820px), (pointer: coarse)"
+                srcset="https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile/characters/collection/frost-scale-collection-final-v1.webp"
+              />
+              <img
+                src="./assets/characters/collection/final/frost-scale-collection-final-v1.png"
+                alt="霜鳞全身立绘"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>霜鳞 · 守序</figcaption>
+          </figure>
+          <figure>
+            <picture>
+              <source
+                media="(max-width: 820px), (pointer: coarse)"
+                srcset="https://fastly.jsdelivr.net/gh/r2177632-design/tidal-study-room@main/assets/mobile/characters/collection/scarlet-page-collection-final-v1.webp"
+              />
+              <img
+                src="./assets/characters/collection/final/scarlet-page-collection-final-v1.png"
+                alt="绯页全身立绘"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>绯页 · 编目</figcaption>
+          </figure>
+        </div>
+        <p class="merge-kicker">TIDAL CARD FRAMED</p>
+        <h2 id="mergeTitle">潮汐典藏卡完成装帧</h2>
+        <p id="mergeDescription">
+          每解锁 3 位伙伴的鲸歌形态，就能把本组的同行印记装帧成 1 张潮汐典藏卡。
+        </p>
+        <button class="primary-button merge-confirm" id="mergeConfirm" type="button">
+          装帧并收进典藏馆
+        </button>
+      </div>
+    </div>
+
+    <div class="mark-choice-overlay" id="markChoiceOverlay" aria-hidden="true">
+      <section class="mark-choice-scene" role="dialog" aria-modal="true" aria-labelledby="markChoiceTitle">
+        <button class="mark-choice-close" id="markChoiceClose" type="button" aria-label="稍后选择">
+          <i data-lucide="x"></i>
+        </button>
+        <p class="mark-choice-kicker">PERFECT TIDE SEAL</p>
+        <h2 id="markChoiceTitle">选择全清的专属印记</h2>
+        <p class="mark-choice-copy" id="markChoiceCopy">
+          已结算的全清日会存入待选区，未领取不会过期。挑选一位伙伴，让她的宠物印记落在收藏册中。
+        </p>
+        <div class="mark-choice-grid" id="markChoiceGrid"></div>
+        <p class="mark-choice-note" id="markChoiceNote">每次领取消耗 1 枚已存全清印记；剩余印记可以以后继续选择。</p>
+      </section>
+    </div>
+
+    <script src="./assets/characters/idle/idle-frames.js?v=20261003223000"></script>
+    <script src="./character-roster.js?v=20261003223000"></script>
+    <script src="./character-marks.js?v=20261003223000"></script>
+    <script src="./farm-game.js?v=20261003223000"></script>
+    <script src="./farm-art.js?v=20261003223000"></script>
+    <script src="./app.js?v=20261003223000"></script>
+  </body>
+</html>

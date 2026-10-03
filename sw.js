@@ -1,1 +1,140 @@
-Y29uc3QgQ0FDSEVfVkVSU0lPTiA9ICIyMDI2MTAwMzIyMzAwMCI7CmNvbnN0IENPUkVfQ0FDSEUgPSBgdGlkYWwtc3R1ZHktY29yZS0ke0NBQ0hFX1ZFUlNJT059YDsKY29uc3QgUlVOVElNRV9DQUNIRSA9IGB0aWRhbC1zdHVkeS1ydW50aW1lLSR7Q0FDSEVfVkVSU0lPTn1gOwpjb25zdCBDRE5fT1JJR0lOID0gImh0dHBzOi8vZmFzdGx5LmpzZGVsaXZyLm5ldCI7CmNvbnN0IENETl9BU1NFVF9QUkVGSVggPSAiL2doL3IyMTc3NjMyLWRlc2lnbi90aWRhbC1zdHVkeS1yb29tQG1haW4vYXNzZXRzLyI7Cgpjb25zdCBDT1JFX0FTU0VUUyA9IFsKICAiLi8iLAogICIuL2luZGV4Lmh0bWwiLAogICIuL3N0eWxlcy5jc3M/dj0yMDI2MTAwMzIyMzAwMCIsCiAgIi4vZmFybS5jc3M/dj0yMDI2MTAwMzIyMzAwMCIsCiAgIi4vY2hhcmFjdGVyLXJvc3Rlci5qcz92PTIwMjYxMDAzMjIzMDAwIiwKICAiLi9jaGFyYWN0ZXItbWFya3MuanM/dj0yMDI2MTAwMzIyMzAwMCIsCiAgIi4vZmFybS1nYW1lLmpzP3Y9MjAyNjEwMDMyMjMwMDAiLAogICIuL2Zhcm0tYXJ0LmpzP3Y9MjAyNjEwMDMyMjMwMDAiLAogICIuL2FwcC5qcz92PTIwMjYxMDAzMjIzMDAwIiwKICAiLi9tYW5pZmVzdC53ZWJtYW5pZmVzdCIsCiAgIi4vYXNzZXRzL2NoYXJhY3RlcnMvaWRsZS9pZGxlLWZyYW1lcy5qcz92PTIwMjYxMDAzMjIzMDAwIiwKICAiLi9hc3NldHMvbGF1bmNoZXIvdGlkYWwtc3R1ZHktMTkyLnBuZyIsCiAgIi4vYXNzZXRzL2xhdW5jaGVyL3RpZGFsLXN0dWR5LTUxMi5wbmciLAogICIuL2Fzc2V0cy9sYXVuY2hlci90aWRhbC1zdHVkeS1tYXNrYWJsZS01MTIucG5nIiwKICAiLi92ZW5kb3IvbHVjaWRlLmpzIiwKXTsKCmFzeW5jIGZ1bmN0aW9uIHByZWNhY2hlQ29yZUFzc2V0cygpIHsKICBjb25zdCBjYWNoZSA9IGF3YWl0IGNhY2hlcy5vcGVuKENPUkVfQ0FDSEUpOwogIGF3YWl0IFByb21pc2UuYWxsU2V0dGxlZCgKICAgIENPUkVfQVNTRVRTLm1hcChhc3luYyAoYXNzZXQpID0+IHsKICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChhc3NldCwgeyBjYWNoZTogInJlbG9hZCIgfSk7CiAgICAgIGlmIChyZXNwb25zZS5vaykgYXdhaXQgY2FjaGUucHV0KGFzc2V0LCByZXNwb25zZSk7CiAgICB9KSwKICApOwp9CgpzZWxmLmFkZEV2ZW50TGlzdGVuZXIoImluc3RhbGwiLCAoZXZlbnQpID0+IHsKICBldmVudC53YWl0VW50aWwoCiAgICBwcmVjYWNoZUNvcmVBc3NldHMoKS50aGVuKCgpID0+IHNlbGYuc2tpcFdhaXRpbmcoKSksCiAgKTsKfSk7CgpzZWxmLmFkZEV2ZW50TGlzdGVuZXIoImFjdGl2YXRlIiwgKGV2ZW50KSA9PiB7CiAgZXZlbnQud2FpdFVudGlsKAogICAgY2FjaGVzCiAgICAgIC5rZXlzKCkKICAgICAgLnRoZW4oKGtleXMpID0+CiAgICAgICAgUHJvbWlzZS5hbGwoCiAgICAgICAgICBrZXlzCiAgICAgICAgICAgIC5maWx0ZXIoKGtleSkgPT4ga2V5ICE9PSBDT1JFX0NBQ0hFICYmIGtleSAhPT0gUlVOVElNRV9DQUNIRSkKICAgICAgICAgICAgLm1hcCgoa2V5KSA9PiBjYWNoZXMuZGVsZXRlKGtleSkpLAogICAgICAgICksCiAgICAgICkKICAgICAgLnRoZW4oKCkgPT4gc2VsZi5jbGllbnRzLmNsYWltKCkpLAogICk7Cn0pOwoKZnVuY3Rpb24gaXNSdW50aW1lQXNzZXQocmVxdWVzdCwgdXJsKSB7CiAgcmV0dXJuICgKICAgIHJlcXVlc3QuZGVzdGluYXRpb24gPT09ICJpbWFnZSIgfHwKICAgIHVybC5wYXRobmFtZS5pbmNsdWRlcygiL2Fzc2V0cy9tb2JpbGUvIikgfHwKICAgIHVybC5wYXRobmFtZS5pbmNsdWRlcygiL2Fzc2V0cy9jaGFyYWN0ZXJzL2lkbGUvIikgfHwKICAgIHVybC5wYXRobmFtZS5lbmRzV2l0aCgiL3ZlbmRvci9sdWNpZGUuanMiKQogICk7Cn0KCmZ1bmN0aW9uIGlzQ2RuQXNzZXQodXJsKSB7CiAgcmV0dXJuICgKICAgIHVybC5vcmlnaW4gPT09IENETl9PUklHSU4gJiYKICAgIHVybC5wYXRobmFtZS5zdGFydHNXaXRoKENETl9BU1NFVF9QUkVGSVgpCiAgKTsKfQoKZnVuY3Rpb24gaXNTaGVsbEFzc2V0KHJlcXVlc3QpIHsKICByZXR1cm4gWyJzdHlsZSIsICJzY3JpcHQiLCAibWFuaWZlc3QiLCAiZm9udCJdLmluY2x1ZGVzKHJlcXVlc3QuZGVzdGluYXRpb24pOwp9Cgphc3luYyBmdW5jdGlvbiBjYWNoZUZpcnN0KHJlcXVlc3QsIGNhY2hlTmFtZSkgewogIGNvbnN0IGNhY2hlID0gYXdhaXQgY2FjaGVzLm9wZW4oY2FjaGVOYW1lKTsKICBjb25zdCBjYWNoZWQgPSBhd2FpdCBjYWNoZS5tYXRjaChyZXF1ZXN0KTsKICBpZiAoY2FjaGVkKSByZXR1cm4gY2FjaGVkOwoKICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGZldGNoKHJlcXVlc3QpOwogIGlmIChyZXNwb25zZS5vayB8fCByZXNwb25zZS50eXBlID09PSAib3BhcXVlIikgewogICAgdHJ5IHsKICAgICAgYXdhaXQgY2FjaGUucHV0KHJlcXVlc3QsIHJlc3BvbnNlLmNsb25lKCkpOwogICAgfSBjYXRjaCB7CiAgICAgIC8vIOmDqOWIhua1j+iniOWZqOeahOi3qOWfn+WTjeW6lOWPr+iDveS4jeWFgeiuuOiQveebmO+8jOWbvueJh+S7jeWPr+ato+W4uOaYvuekuuOAggogICAgfQogIH0KICByZXR1cm4gcmVzcG9uc2U7Cn0KCmFzeW5jIGZ1bmN0aW9uIG5ldHdvcmtGaXJzdE5hdmlnYXRpb24ocmVxdWVzdCkgewogIGNvbnN0IGNhY2hlID0gYXdhaXQgY2FjaGVzLm9wZW4oQ09SRV9DQUNIRSk7CiAgdHJ5IHsKICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2gocmVxdWVzdCk7CiAgICBpZiAocmVzcG9uc2Uub2spIGNhY2hlLnB1dCgiLi9pbmRleC5odG1sIiwgcmVzcG9uc2UuY2xvbmUoKSk7CiAgICByZXR1cm4gcmVzcG9uc2U7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gKGF3YWl0IGNhY2hlLm1hdGNoKCIuL2luZGV4Lmh0bWwiKSkgfHwgUmVzcG9uc2UuZXJyb3IoKTsKICB9Cn0KCmFzeW5jIGZ1bmN0aW9uIHN0YWxlV2hpbGVSZXZhbGlkYXRlKHJlcXVlc3QsIGNhY2hlTmFtZSkgewogIGNvbnN0IGNhY2hlID0gYXdhaXQgY2FjaGVzLm9wZW4oY2FjaGVOYW1lKTsKICBjb25zdCBjYWNoZWQgPSBhd2FpdCBjYWNoZS5tYXRjaChyZXF1ZXN0KTsKICBjb25zdCBuZXR3b3JrID0gZmV0Y2gocmVxdWVzdCkKICAgIC50aGVuKChyZXNwb25zZSkgPT4gewogICAgICBpZiAocmVzcG9uc2Uub2spIGNhY2hlLnB1dChyZXF1ZXN0LCByZXNwb25zZS5jbG9uZSgpKTsKICAgICAgcmV0dXJuIHJlc3BvbnNlOwogICAgfSkKICAgIC5jYXRjaCgoKSA9PiBjYWNoZWQpOwogIHJldHVybiBjYWNoZWQgfHwgbmV0d29yazsKfQoKc2VsZi5hZGRFdmVudExpc3RlbmVyKCJmZXRjaCIsIChldmVudCkgPT4gewogIGNvbnN0IHsgcmVxdWVzdCB9ID0gZXZlbnQ7CiAgaWYgKHJlcXVlc3QubWV0aG9kICE9PSAiR0VUIikgcmV0dXJuOwoKICBjb25zdCB1cmwgPSBuZXcgVVJMKHJlcXVlc3QudXJsKTsKICBpZiAodXJsLm9yaWdpbiAhPT0gc2VsZi5sb2NhdGlvbi5vcmlnaW4pIHsKICAgIGlmIChyZXF1ZXN0LmRlc3RpbmF0aW9uID09PSAiaW1hZ2UiICYmIGlzQ2RuQXNzZXQodXJsKSkgewogICAgICBldmVudC5yZXNwb25kV2l0aChjYWNoZUZpcnN0KHJlcXVlc3QsIFJVTlRJTUVfQ0FDSEUpKTsKICAgIH0KICAgIHJldHVybjsKICB9CgogIGlmIChyZXF1ZXN0Lm1vZGUgPT09ICJuYXZpZ2F0ZSIpIHsKICAgIGV2ZW50LnJlc3BvbmRXaXRoKG5ldHdvcmtGaXJzdE5hdmlnYXRpb24ocmVxdWVzdCkpOwogICAgcmV0dXJuOwogIH0KCiAgaWYgKGlzUnVudGltZUFzc2V0KHJlcXVlc3QsIHVybCkpIHsKICAgIGV2ZW50LnJlc3BvbmRXaXRoKGNhY2hlRmlyc3QocmVxdWVzdCwgUlVOVElNRV9DQUNIRSkpOwogICAgcmV0dXJuOwogIH0KCiAgaWYgKGlzU2hlbGxBc3NldChyZXF1ZXN0KSkgewogICAgZXZlbnQucmVzcG9uZFdpdGgoc3RhbGVXaGlsZVJldmFsaWRhdGUocmVxdWVzdCwgQ09SRV9DQUNIRSkpOwogIH0KfSk7Cg==
+const CACHE_VERSION = "20261003223000";
+const CORE_CACHE = `tidal-study-core-${CACHE_VERSION}`;
+const RUNTIME_CACHE = `tidal-study-runtime-${CACHE_VERSION}`;
+const CDN_ORIGIN = "https://fastly.jsdelivr.net";
+const CDN_ASSET_PREFIX = "/gh/r2177632-design/tidal-study-room@main/assets/";
+
+const CORE_ASSETS = [
+  "./",
+  "./index.html",
+  "./styles.css?v=20261003223000",
+  "./farm.css?v=20261003223000",
+  "./character-roster.js?v=20261003223000",
+  "./character-marks.js?v=20261003223000",
+  "./farm-game.js?v=20261003223000",
+  "./farm-art.js?v=20261003223000",
+  "./app.js?v=20261003223000",
+  "./manifest.webmanifest",
+  "./assets/characters/idle/idle-frames.js?v=20261003223000",
+  "./assets/launcher/tidal-study-192.png",
+  "./assets/launcher/tidal-study-512.png",
+  "./assets/launcher/tidal-study-maskable-512.png",
+  "./vendor/lucide.js",
+];
+
+async function precacheCoreAssets() {
+  const cache = await caches.open(CORE_CACHE);
+  await Promise.allSettled(
+    CORE_ASSETS.map(async (asset) => {
+      const response = await fetch(asset, { cache: "reload" });
+      if (response.ok) await cache.put(asset, response);
+    }),
+  );
+}
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    precacheCoreAssets().then(() => self.skipWaiting()),
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(
+          keys
+            .filter((key) => key !== CORE_CACHE && key !== RUNTIME_CACHE)
+            .map((key) => caches.delete(key)),
+        ),
+      )
+      .then(() => self.clients.claim()),
+  );
+});
+
+function isRuntimeAsset(request, url) {
+  return (
+    request.destination === "image" ||
+    url.pathname.includes("/assets/mobile/") ||
+    url.pathname.includes("/assets/characters/idle/") ||
+    url.pathname.endsWith("/vendor/lucide.js")
+  );
+}
+
+function isCdnAsset(url) {
+  return (
+    url.origin === CDN_ORIGIN &&
+    url.pathname.startsWith(CDN_ASSET_PREFIX)
+  );
+}
+
+function isShellAsset(request) {
+  return ["style", "script", "manifest", "font"].includes(request.destination);
+}
+
+async function cacheFirst(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
+  if (cached) return cached;
+
+  const response = await fetch(request);
+  if (response.ok || response.type === "opaque") {
+    try {
+      await cache.put(request, response.clone());
+    } catch {
+      // 部分浏览器的跨域响应可能不允许落盘，图片仍可正常显示。
+    }
+  }
+  return response;
+}
+
+async function networkFirstNavigation(request) {
+  const cache = await caches.open(CORE_CACHE);
+  try {
+    const response = await fetch(request);
+    if (response.ok) cache.put("./index.html", response.clone());
+    return response;
+  } catch {
+    return (await cache.match("./index.html")) || Response.error();
+  }
+}
+
+async function staleWhileRevalidate(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(request);
+  const network = fetch(request)
+    .then((response) => {
+      if (response.ok) cache.put(request, response.clone());
+      return response;
+    })
+    .catch(() => cached);
+  return cached || network;
+}
+
+self.addEventListener("fetch", (event) => {
+  const { request } = event;
+  if (request.method !== "GET") return;
+
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) {
+    if (request.destination === "image" && isCdnAsset(url)) {
+      event.respondWith(cacheFirst(request, RUNTIME_CACHE));
+    }
+    return;
+  }
+
+  if (request.mode === "navigate") {
+    event.respondWith(networkFirstNavigation(request));
+    return;
+  }
+
+  if (isRuntimeAsset(request, url)) {
+    event.respondWith(cacheFirst(request, RUNTIME_CACHE));
+    return;
+  }
+
+  if (isShellAsset(request)) {
+    event.respondWith(staleWhileRevalidate(request, CORE_CACHE));
+  }
+});
